@@ -1,0 +1,2679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>03D03E05-8CF3-43B5-82DC-344E16C4E9F7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>03D03E05-8CF3-43B5-82DC-344E16C4E9F7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110415.22433996</real>
+			<key>timeStoppedRecording</key>
+			<real>637110415.31381798</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>03D03E05-8CF3-43B5-82DC-344E16C4E9F7</string>
+		</dict>
+		<key>075CFA1B-CD70-44D7-9E98-1F03FCA43CA1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>075CFA1B-CD70-44D7-9E98-1F03FCA43CA1.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105137.11274695</real>
+			<key>timeStoppedRecording</key>
+			<real>637105138.44787598</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>075CFA1B-CD70-44D7-9E98-1F03FCA43CA1</string>
+		</dict>
+		<key>0AFDBA18-389B-417A-A7C0-8AA6CED4F76C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0AFDBA18-389B-417A-A7C0-8AA6CED4F76C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107564.21318305</real>
+			<key>timeStoppedRecording</key>
+			<real>637107565.23494899</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>0AFDBA18-389B-417A-A7C0-8AA6CED4F76C</string>
+		</dict>
+		<key>0E4189D8-0CF0-46B2-8AB7-49CADC672B63</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E4189D8-0CF0-46B2-8AB7-49CADC672B63.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109130.70383298</real>
+			<key>timeStoppedRecording</key>
+			<real>637109131.57350802</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>0E4189D8-0CF0-46B2-8AB7-49CADC672B63</string>
+		</dict>
+		<key>0EB4D29D-6C4C-448C-8970-B2A509C8D0FB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0EB4D29D-6C4C-448C-8970-B2A509C8D0FB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105351.224967</real>
+			<key>timeStoppedRecording</key>
+			<real>637105351.90360606</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>0EB4D29D-6C4C-448C-8970-B2A509C8D0FB</string>
+		</dict>
+		<key>0F89E0D4-63B2-44E2-A4D6-D8B0DD05F05B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0F89E0D4-63B2-44E2-A4D6-D8B0DD05F05B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105135.30833995</real>
+			<key>timeStoppedRecording</key>
+			<real>637105135.393803</real>
+			<key>title</key>
+			<string>Clean OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>0F89E0D4-63B2-44E2-A4D6-D8B0DD05F05B</string>
+		</dict>
+		<key>1047525D-E8AA-435E-BDD2-52A4C2DC9725</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1047525D-E8AA-435E-BDD2-52A4C2DC9725.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106870.60520995</real>
+			<key>timeStoppedRecording</key>
+			<real>637106871.53891695</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>1047525D-E8AA-435E-BDD2-52A4C2DC9725</string>
+		</dict>
+		<key>12A6B8CB-6236-48C7-B076-DED7D4E4926F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>12A6B8CB-6236-48C7-B076-DED7D4E4926F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>626135615.31338298</real>
+			<key>timeStoppedRecording</key>
+			<real>626135615.43047905</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>12A6B8CB-6236-48C7-B076-DED7D4E4926F</string>
+		</dict>
+		<key>153C3938-F23F-4A1C-BCBD-91B561BDD1B5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>153C3938-F23F-4A1C-BCBD-91B561BDD1B5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110616.27145004</real>
+			<key>timeStoppedRecording</key>
+			<real>637110617.27193904</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>153C3938-F23F-4A1C-BCBD-91B561BDD1B5</string>
+		</dict>
+		<key>176D2CC4-7163-4D83-973F-BD21393276D7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>176D2CC4-7163-4D83-973F-BD21393276D7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105116.00646603</real>
+			<key>timeStoppedRecording</key>
+			<real>637105116.59935105</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>176D2CC4-7163-4D83-973F-BD21393276D7</string>
+		</dict>
+		<key>1C2C1BE6-A67D-4ACE-81C4-89CC9861EC95</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1C2C1BE6-A67D-4ACE-81C4-89CC9861EC95.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637102462.14863503</real>
+			<key>timeStoppedRecording</key>
+			<real>637102462.99568605</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>1C2C1BE6-A67D-4ACE-81C4-89CC9861EC95</string>
+		</dict>
+		<key>1F7D813E-02D5-40F2-ADE0-440C19E64962</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1F7D813E-02D5-40F2-ADE0-440C19E64962.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110467.30096698</real>
+			<key>timeStoppedRecording</key>
+			<real>637110468.45688403</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>1F7D813E-02D5-40F2-ADE0-440C19E64962</string>
+		</dict>
+		<key>27B6E494-E5C7-4F02-9705-39AFEFE0E036</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>27B6E494-E5C7-4F02-9705-39AFEFE0E036.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637104895.23341596</real>
+			<key>timeStoppedRecording</key>
+			<real>637104895.93460202</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>27B6E494-E5C7-4F02-9705-39AFEFE0E036</string>
+		</dict>
+		<key>29682919-40C8-42D7-BE29-F327CB4CE4BB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>29682919-40C8-42D7-BE29-F327CB4CE4BB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110399.18142295</real>
+			<key>timeStoppedRecording</key>
+			<real>637110399.28029704</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>29682919-40C8-42D7-BE29-F327CB4CE4BB</string>
+		</dict>
+		<key>3353588A-96DC-4D07-B4BB-7AB9FFC8A4FC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3353588A-96DC-4D07-B4BB-7AB9FFC8A4FC.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111226.44006705</real>
+			<key>timeStoppedRecording</key>
+			<real>637111227.25042498</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>3353588A-96DC-4D07-B4BB-7AB9FFC8A4FC</string>
+		</dict>
+		<key>35452909-99F9-476E-BBA0-DF850C1803B1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>35452909-99F9-476E-BBA0-DF850C1803B1.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105967.55963099</real>
+			<key>timeStoppedRecording</key>
+			<real>637105968.483711</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>35452909-99F9-476E-BBA0-DF850C1803B1</string>
+		</dict>
+		<key>36F754E5-2009-493C-B4B2-C15F52C51DE2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>36F754E5-2009-493C-B4B2-C15F52C51DE2.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637103744.36329603</real>
+			<key>timeStoppedRecording</key>
+			<real>637103745.31976402</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>36F754E5-2009-493C-B4B2-C15F52C51DE2</string>
+		</dict>
+		<key>40E6BBB1-195B-4A4C-A167-DCCED476C771</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>40E6BBB1-195B-4A4C-A167-DCCED476C771.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106799.23370898</real>
+			<key>timeStoppedRecording</key>
+			<real>637106800.34765601</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>40E6BBB1-195B-4A4C-A167-DCCED476C771</string>
+		</dict>
+		<key>450B8451-8DBE-4CF7-AEDC-2759A61C5F98</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>450B8451-8DBE-4CF7-AEDC-2759A61C5F98.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110130.68481195</real>
+			<key>timeStoppedRecording</key>
+			<real>637110131.56296599</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>450B8451-8DBE-4CF7-AEDC-2759A61C5F98</string>
+		</dict>
+		<key>453AFBE6-3793-47BF-A84E-9F6DD4E904C5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>453AFBE6-3793-47BF-A84E-9F6DD4E904C5.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105899.87387204</real>
+			<key>timeStoppedRecording</key>
+			<real>637105901.01991796</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>453AFBE6-3793-47BF-A84E-9F6DD4E904C5</string>
+		</dict>
+		<key>49B9B987-C61B-485E-BEF8-C1931D97F487</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>49B9B987-C61B-485E-BEF8-C1931D97F487.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111026.97434199</real>
+			<key>timeStoppedRecording</key>
+			<real>637111027.69638205</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>49B9B987-C61B-485E-BEF8-C1931D97F487</string>
+		</dict>
+		<key>4CC65C07-87AD-44AE-8F54-9918783EFFBB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4CC65C07-87AD-44AE-8F54-9918783EFFBB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109107.39712298</real>
+			<key>timeStoppedRecording</key>
+			<real>637109108.34247303</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>4CC65C07-87AD-44AE-8F54-9918783EFFBB</string>
+		</dict>
+		<key>4D424FF5-5801-4BDF-9821-FDF6659E0DEA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4D424FF5-5801-4BDF-9821-FDF6659E0DEA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110854.70198095</real>
+			<key>timeStoppedRecording</key>
+			<real>637110855.49097598</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>4D424FF5-5801-4BDF-9821-FDF6659E0DEA</string>
+		</dict>
+		<key>5361F086-038F-48A5-8B49-30C6610DD23B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5361F086-038F-48A5-8B49-30C6610DD23B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637102442.89774501</real>
+			<key>timeStoppedRecording</key>
+			<real>637102445.09133899</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>5361F086-038F-48A5-8B49-30C6610DD23B</string>
+		</dict>
+		<key>544B91D9-E392-4B44-9A9B-BFB8D3F3A686</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>544B91D9-E392-4B44-9A9B-BFB8D3F3A686.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109589.37571204</real>
+			<key>timeStoppedRecording</key>
+			<real>637109590.34706199</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>544B91D9-E392-4B44-9A9B-BFB8D3F3A686</string>
+		</dict>
+		<key>596FB3E3-2818-4842-8C3B-01366FAE2292</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>596FB3E3-2818-4842-8C3B-01366FAE2292.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637103656.89363396</real>
+			<key>timeStoppedRecording</key>
+			<real>637103658.31299305</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>596FB3E3-2818-4842-8C3B-01366FAE2292</string>
+		</dict>
+		<key>5BE37326-9DB3-4D6C-BA8F-575DF6724E36</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5BE37326-9DB3-4D6C-BA8F-575DF6724E36.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637104921.26656103</real>
+			<key>timeStoppedRecording</key>
+			<real>637104922.00323796</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>5BE37326-9DB3-4D6C-BA8F-575DF6724E36</string>
+		</dict>
+		<key>5C5B1B87-44CC-4270-A9DF-9A4415FF8F14</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5C5B1B87-44CC-4270-A9DF-9A4415FF8F14.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109556.91895902</real>
+			<key>timeStoppedRecording</key>
+			<real>637109557.69315398</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>5C5B1B87-44CC-4270-A9DF-9A4415FF8F14</string>
+		</dict>
+		<key>611805C8-5707-43E2-A886-7E6C6167A3C2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>611805C8-5707-43E2-A886-7E6C6167A3C2.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109949.62871599</real>
+			<key>timeStoppedRecording</key>
+			<real>637109950.58892703</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>611805C8-5707-43E2-A886-7E6C6167A3C2</string>
+		</dict>
+		<key>631F386D-1A29-45F4-BF79-52F47EEB3F4F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>631F386D-1A29-45F4-BF79-52F47EEB3F4F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110539.45972502</real>
+			<key>timeStoppedRecording</key>
+			<real>637110540.51570904</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>631F386D-1A29-45F4-BF79-52F47EEB3F4F</string>
+		</dict>
+		<key>6502C0CA-2696-401D-A23F-EEED958DB236</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6502C0CA-2696-401D-A23F-EEED958DB236.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110994.91292298</real>
+			<key>timeStoppedRecording</key>
+			<real>637110995.67637205</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>6502C0CA-2696-401D-A23F-EEED958DB236</string>
+		</dict>
+		<key>660208FB-1AF0-436F-B64C-48348DF1B060</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>660208FB-1AF0-436F-B64C-48348DF1B060.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107303.48842597</real>
+			<key>timeStoppedRecording</key>
+			<real>637107304.30926001</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>660208FB-1AF0-436F-B64C-48348DF1B060</string>
+		</dict>
+		<key>6E8481B7-7438-4C2D-B8B1-20F81F970DDA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6E8481B7-7438-4C2D-B8B1-20F81F970DDA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109306.95201302</real>
+			<key>timeStoppedRecording</key>
+			<real>637109308.15303099</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>6E8481B7-7438-4C2D-B8B1-20F81F970DDA</string>
+		</dict>
+		<key>70CE3B1E-AF51-4324-85CD-BAC0D4BA145F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>70CE3B1E-AF51-4324-85CD-BAC0D4BA145F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111064.40395999</real>
+			<key>timeStoppedRecording</key>
+			<real>637111065.37430704</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>70CE3B1E-AF51-4324-85CD-BAC0D4BA145F</string>
+		</dict>
+		<key>70D14EB5-B846-4334-8A13-D4EBCC23EE01</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>70D14EB5-B846-4334-8A13-D4EBCC23EE01.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107472.39862204</real>
+			<key>timeStoppedRecording</key>
+			<real>637107472.99725199</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>70D14EB5-B846-4334-8A13-D4EBCC23EE01</string>
+		</dict>
+		<key>7197C7DF-F5CE-4869-8766-282DC71CC013</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7197C7DF-F5CE-4869-8766-282DC71CC013.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111509.43802297</real>
+			<key>timeStoppedRecording</key>
+			<real>637111509.53997898</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7197C7DF-F5CE-4869-8766-282DC71CC013</string>
+		</dict>
+		<key>75E0EBA7-9994-4404-84C5-5925D866FB31</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>75E0EBA7-9994-4404-84C5-5925D866FB31.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111548.20630598</real>
+			<key>timeStoppedRecording</key>
+			<real>637111549.96309304</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>75E0EBA7-9994-4404-84C5-5925D866FB31</string>
+		</dict>
+		<key>7925172A-8198-4D97-8D02-D148CE167EA9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7925172A-8198-4D97-8D02-D148CE167EA9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111647.50079703</real>
+			<key>timeStoppedRecording</key>
+			<real>637111648.55583894</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7925172A-8198-4D97-8D02-D148CE167EA9</string>
+		</dict>
+		<key>793E498D-AFEC-4896-85C7-53C50927D16E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>793E498D-AFEC-4896-85C7-53C50927D16E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106615.19194102</real>
+			<key>timeStoppedRecording</key>
+			<real>637106616.31972301</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>793E498D-AFEC-4896-85C7-53C50927D16E</string>
+		</dict>
+		<key>79BE39D3-0CCD-447B-80C7-0E937EEB0573</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>79BE39D3-0CCD-447B-80C7-0E937EEB0573.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110354.272241</real>
+			<key>timeStoppedRecording</key>
+			<real>637110354.36749697</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>79BE39D3-0CCD-447B-80C7-0E937EEB0573</string>
+		</dict>
+		<key>7B4A9C9A-F948-49E1-AE27-551D1C2E4DB6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7B4A9C9A-F948-49E1-AE27-551D1C2E4DB6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105327.38617802</real>
+			<key>timeStoppedRecording</key>
+			<real>637105328.06539905</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7B4A9C9A-F948-49E1-AE27-551D1C2E4DB6</string>
+		</dict>
+		<key>7BD1012B-D91B-4598-99ED-E2960E8DCCF7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7BD1012B-D91B-4598-99ED-E2960E8DCCF7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110375.72537601</real>
+			<key>timeStoppedRecording</key>
+			<real>637110375.82336795</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7BD1012B-D91B-4598-99ED-E2960E8DCCF7</string>
+		</dict>
+		<key>7DF68E6B-3600-40C9-B323-AE2C105055AB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7DF68E6B-3600-40C9-B323-AE2C105055AB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637108943.55339503</real>
+			<key>timeStoppedRecording</key>
+			<real>637108944.48244095</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7DF68E6B-3600-40C9-B323-AE2C105055AB</string>
+		</dict>
+		<key>7E4352EF-404D-419A-B764-E94BF39A411A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7E4352EF-404D-419A-B764-E94BF39A411A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107747.66784406</real>
+			<key>timeStoppedRecording</key>
+			<real>637107748.41909504</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7E4352EF-404D-419A-B764-E94BF39A411A</string>
+		</dict>
+		<key>7F05C7D7-B535-4628-A989-D97B1F165EDA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7F05C7D7-B535-4628-A989-D97B1F165EDA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107652.51441395</real>
+			<key>timeStoppedRecording</key>
+			<real>637107653.14507699</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>7F05C7D7-B535-4628-A989-D97B1F165EDA</string>
+		</dict>
+		<key>82020631-1C2B-4337-AEEF-8E8910BB946E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>82020631-1C2B-4337-AEEF-8E8910BB946E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106043.21113002</real>
+			<key>timeStoppedRecording</key>
+			<real>637106043.92527294</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>82020631-1C2B-4337-AEEF-8E8910BB946E</string>
+		</dict>
+		<key>8227DCA7-C542-480B-8F2F-D7B005A3849C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8227DCA7-C542-480B-8F2F-D7B005A3849C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111325.03671598</real>
+			<key>timeStoppedRecording</key>
+			<real>637111325.95548904</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8227DCA7-C542-480B-8F2F-D7B005A3849C</string>
+		</dict>
+		<key>86BB0EB5-0AB5-4D07-8E1C-4E78DE00AE82</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>86BB0EB5-0AB5-4D07-8E1C-4E78DE00AE82.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111272.47677398</real>
+			<key>timeStoppedRecording</key>
+			<real>637111273.21537995</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>86BB0EB5-0AB5-4D07-8E1C-4E78DE00AE82</string>
+		</dict>
+		<key>89E22D33-4622-49C6-9B37-14B5841E8CB3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>89E22D33-4622-49C6-9B37-14B5841E8CB3.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109637.80774498</real>
+			<key>timeStoppedRecording</key>
+			<real>637109638.73860002</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>89E22D33-4622-49C6-9B37-14B5841E8CB3</string>
+		</dict>
+		<key>8AE42C95-466D-419A-B08D-60486B22FA16</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8AE42C95-466D-419A-B08D-60486B22FA16.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637102644.99754596</real>
+			<key>timeStoppedRecording</key>
+			<real>637102645.56725895</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8AE42C95-466D-419A-B08D-60486B22FA16</string>
+		</dict>
+		<key>8AFCCA00-D334-4834-AFD0-2839D7D5C543</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8AFCCA00-D334-4834-AFD0-2839D7D5C543.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109573.94001603</real>
+			<key>timeStoppedRecording</key>
+			<real>637109574.88157201</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8AFCCA00-D334-4834-AFD0-2839D7D5C543</string>
+		</dict>
+		<key>8B7F0BDC-FA0F-432F-B339-6062A9E55BD0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8B7F0BDC-FA0F-432F-B339-6062A9E55BD0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106789.49178898</real>
+			<key>timeStoppedRecording</key>
+			<real>637106790.27655494</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8B7F0BDC-FA0F-432F-B339-6062A9E55BD0</string>
+		</dict>
+		<key>8E71C60D-0B0B-4258-8AF3-B0983A47594D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8E71C60D-0B0B-4258-8AF3-B0983A47594D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637108912.36414301</real>
+			<key>timeStoppedRecording</key>
+			<real>637108912.45516098</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8E71C60D-0B0B-4258-8AF3-B0983A47594D</string>
+		</dict>
+		<key>8F73BE5C-84DA-43D8-AEC3-B1C494B8AD1A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8F73BE5C-84DA-43D8-AEC3-B1C494B8AD1A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105180.09848797</real>
+			<key>timeStoppedRecording</key>
+			<real>637105181.25027895</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>8F73BE5C-84DA-43D8-AEC3-B1C494B8AD1A</string>
+		</dict>
+		<key>94AE0326-EE63-4715-9C53-6653DDD9FD61</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>94AE0326-EE63-4715-9C53-6653DDD9FD61.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107432.67451203</real>
+			<key>timeStoppedRecording</key>
+			<real>637107433.73131895</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>94AE0326-EE63-4715-9C53-6653DDD9FD61</string>
+		</dict>
+		<key>95756F08-9354-4277-9A29-0371214B23AA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>95756F08-9354-4277-9A29-0371214B23AA.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107480.17214596</real>
+			<key>timeStoppedRecording</key>
+			<real>637107480.67894006</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>95756F08-9354-4277-9A29-0371214B23AA</string>
+		</dict>
+		<key>9C3A16EA-0DDE-41F4-A3BB-9A8B1ACDADDC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9C3A16EA-0DDE-41F4-A3BB-9A8B1ACDADDC.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105416.27408004</real>
+			<key>timeStoppedRecording</key>
+			<real>637105417.02810705</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>9C3A16EA-0DDE-41F4-A3BB-9A8B1ACDADDC</string>
+		</dict>
+		<key>A21FE2E0-07CE-4A9E-BC3D-B6D63A1988F4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A21FE2E0-07CE-4A9E-BC3D-B6D63A1988F4.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109031.46577406</real>
+			<key>timeStoppedRecording</key>
+			<real>637109031.57436204</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A21FE2E0-07CE-4A9E-BC3D-B6D63A1988F4</string>
+		</dict>
+		<key>A254E3F5-F944-47DC-BA40-4796274FE88A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A254E3F5-F944-47DC-BA40-4796274FE88A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111484.93662405</real>
+			<key>timeStoppedRecording</key>
+			<real>637111485.04637897</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A254E3F5-F944-47DC-BA40-4796274FE88A</string>
+		</dict>
+		<key>A3B68690-4673-428E-9536-95E8B1662126</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A3B68690-4673-428E-9536-95E8B1662126.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107462.54365396</real>
+			<key>timeStoppedRecording</key>
+			<real>637107462.69485295</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A3B68690-4673-428E-9536-95E8B1662126</string>
+		</dict>
+		<key>A9339766-35A7-492F-B70A-61A95AC73908</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A9339766-35A7-492F-B70A-61A95AC73908.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106225.88102496</real>
+			<key>timeStoppedRecording</key>
+			<real>637106226.69397902</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A9339766-35A7-492F-B70A-61A95AC73908</string>
+		</dict>
+		<key>A9B8ED10-6E7C-4F4C-95FC-F21C17EB47DD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A9B8ED10-6E7C-4F4C-95FC-F21C17EB47DD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111453.51355004</real>
+			<key>timeStoppedRecording</key>
+			<real>637111454.65589595</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A9B8ED10-6E7C-4F4C-95FC-F21C17EB47DD</string>
+		</dict>
+		<key>A9D979E8-593D-432C-84CC-8F7EB5EDC777</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A9D979E8-593D-432C-84CC-8F7EB5EDC777.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637103723.21348703</real>
+			<key>timeStoppedRecording</key>
+			<real>637103724.19719398</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>A9D979E8-593D-432C-84CC-8F7EB5EDC777</string>
+		</dict>
+		<key>AD8B1BA4-A4FF-4807-A668-A8C87B0112FD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AD8B1BA4-A4FF-4807-A668-A8C87B0112FD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109528.43403602</real>
+			<key>timeStoppedRecording</key>
+			<real>637109528.54095995</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>AD8B1BA4-A4FF-4807-A668-A8C87B0112FD</string>
+		</dict>
+		<key>AE2ACA26-4B22-4791-9667-E193CC067CA3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AE2ACA26-4B22-4791-9667-E193CC067CA3.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110446.86045897</real>
+			<key>timeStoppedRecording</key>
+			<real>637110447.84265494</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>AE2ACA26-4B22-4791-9667-E193CC067CA3</string>
+		</dict>
+		<key>BDD988C5-45A1-4522-A749-35755B696D03</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BDD988C5-45A1-4522-A749-35755B696D03.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110666.30854201</real>
+			<key>timeStoppedRecording</key>
+			<real>637110667.03916204</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>BDD988C5-45A1-4522-A749-35755B696D03</string>
+		</dict>
+		<key>C17BED23-2D5B-41EC-B3D7-673A6A72B82A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C17BED23-2D5B-41EC-B3D7-673A6A72B82A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109648.38294899</real>
+			<key>timeStoppedRecording</key>
+			<real>637109649.17140698</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>C17BED23-2D5B-41EC-B3D7-673A6A72B82A</string>
+		</dict>
+		<key>C46D6121-5062-4E74-85E2-4A2397DC0FE0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C46D6121-5062-4E74-85E2-4A2397DC0FE0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637108842.88211405</real>
+			<key>timeStoppedRecording</key>
+			<real>637108843.00135303</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>C46D6121-5062-4E74-85E2-4A2397DC0FE0</string>
+		</dict>
+		<key>C6D16BBF-D3B8-4E0C-BF7A-AF44566FCF06</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C6D16BBF-D3B8-4E0C-BF7A-AF44566FCF06.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637108978.53445899</real>
+			<key>timeStoppedRecording</key>
+			<real>637108979.62092996</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>C6D16BBF-D3B8-4E0C-BF7A-AF44566FCF06</string>
+		</dict>
+		<key>C8651FC8-0E2D-4CE0-A9D3-C7B6C4DC0F3F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8651FC8-0E2D-4CE0-A9D3-C7B6C4DC0F3F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637103835.08472896</real>
+			<key>timeStoppedRecording</key>
+			<real>637103835.80760705</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>C8651FC8-0E2D-4CE0-A9D3-C7B6C4DC0F3F</string>
+		</dict>
+		<key>C9713F9F-4217-438A-9A51-844DF065DC5F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C9713F9F-4217-438A-9A51-844DF065DC5F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105941.52172005</real>
+			<key>timeStoppedRecording</key>
+			<real>637105942.08425701</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>C9713F9F-4217-438A-9A51-844DF065DC5F</string>
+		</dict>
+		<key>CD45446F-E14D-4FBC-AC2A-C5DC6BF0B49F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CD45446F-E14D-4FBC-AC2A-C5DC6BF0B49F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111424.27468395</real>
+			<key>timeStoppedRecording</key>
+			<real>637111425.17652297</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>CD45446F-E14D-4FBC-AC2A-C5DC6BF0B49F</string>
+		</dict>
+		<key>D0060BF2-67C2-496B-AA02-A5F599893BE9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D0060BF2-67C2-496B-AA02-A5F599893BE9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111042.82776999</real>
+			<key>timeStoppedRecording</key>
+			<real>637111042.92424095</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D0060BF2-67C2-496B-AA02-A5F599893BE9</string>
+		</dict>
+		<key>D0930FEE-B79E-40B5-AC1F-E9A4AEF7D070</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D0930FEE-B79E-40B5-AC1F-E9A4AEF7D070.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111311.04106796</real>
+			<key>timeStoppedRecording</key>
+			<real>637111311.13829005</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D0930FEE-B79E-40B5-AC1F-E9A4AEF7D070</string>
+		</dict>
+		<key>D0E91FCE-9F47-49C4-8249-A4690E74CCBD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D0E91FCE-9F47-49C4-8249-A4690E74CCBD.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109444.89030099</real>
+			<key>timeStoppedRecording</key>
+			<real>637109445.809834</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D0E91FCE-9F47-49C4-8249-A4690E74CCBD</string>
+		</dict>
+		<key>D139F214-0142-4829-8356-418DDAFE8C26</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D139F214-0142-4829-8356-418DDAFE8C26.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107530.42670906</real>
+			<key>timeStoppedRecording</key>
+			<real>637107531.18767905</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D139F214-0142-4829-8356-418DDAFE8C26</string>
+		</dict>
+		<key>D2051708-6924-46F3-8CA1-7AFAE1BF9E8C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D2051708-6924-46F3-8CA1-7AFAE1BF9E8C.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637102704.24126303</real>
+			<key>timeStoppedRecording</key>
+			<real>637102705.22978795</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D2051708-6924-46F3-8CA1-7AFAE1BF9E8C</string>
+		</dict>
+		<key>D4E1D215-CCCF-401F-930F-6CD2650D326A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D4E1D215-CCCF-401F-930F-6CD2650D326A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110318.88960898</real>
+			<key>timeStoppedRecording</key>
+			<real>637110319.78927898</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D4E1D215-CCCF-401F-930F-6CD2650D326A</string>
+		</dict>
+		<key>D51CFA82-1FE7-4641-B939-8C7E2F271FD6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D51CFA82-1FE7-4641-B939-8C7E2F271FD6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107602.00049102</real>
+			<key>timeStoppedRecording</key>
+			<real>637107602.794662</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D51CFA82-1FE7-4641-B939-8C7E2F271FD6</string>
+		</dict>
+		<key>D63667D0-7559-46D8-A20F-16295CA9E37D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D63667D0-7559-46D8-A20F-16295CA9E37D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110187.65642595</real>
+			<key>timeStoppedRecording</key>
+			<real>637110187.75353396</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D63667D0-7559-46D8-A20F-16295CA9E37D</string>
+		</dict>
+		<key>D6E79A07-0064-41C4-AD94-E072EC759D1E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D6E79A07-0064-41C4-AD94-E072EC759D1E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637111012.32783401</real>
+			<key>timeStoppedRecording</key>
+			<real>637111013.06458998</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D6E79A07-0064-41C4-AD94-E072EC759D1E</string>
+		</dict>
+		<key>D97A92F1-BB48-4E5D-9BC3-FC92F94B0B59</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D97A92F1-BB48-4E5D-9BC3-FC92F94B0B59.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637109794.61232305</real>
+			<key>timeStoppedRecording</key>
+			<real>637109795.57789803</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>D97A92F1-BB48-4E5D-9BC3-FC92F94B0B59</string>
+		</dict>
+		<key>DB6F7558-D7C4-4633-B307-89D65138BD4F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DB6F7558-D7C4-4633-B307-89D65138BD4F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110237.100824</real>
+			<key>timeStoppedRecording</key>
+			<real>637110237.90703595</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>DB6F7558-D7C4-4633-B307-89D65138BD4F</string>
+		</dict>
+		<key>E05A8D3A-51AF-4D01-B5E5-9E39E3137D7D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E05A8D3A-51AF-4D01-B5E5-9E39E3137D7D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110941.98008597</real>
+			<key>timeStoppedRecording</key>
+			<real>637110942.80942094</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>E05A8D3A-51AF-4D01-B5E5-9E39E3137D7D</string>
+		</dict>
+		<key>EB5F73DD-B5A7-4582-A8B8-99B521173C87</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EB5F73DD-B5A7-4582-A8B8-99B521173C87.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107283.48642504</real>
+			<key>timeStoppedRecording</key>
+			<real>637107284.43885601</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>EB5F73DD-B5A7-4582-A8B8-99B521173C87</string>
+		</dict>
+		<key>EDBDC0FD-ECCA-49D4-947B-92F039ABCCD8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EDBDC0FD-ECCA-49D4-947B-92F039ABCCD8.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637106209.55621302</real>
+			<key>timeStoppedRecording</key>
+			<real>637106210.75036895</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>EDBDC0FD-ECCA-49D4-947B-92F039ABCCD8</string>
+		</dict>
+		<key>EFC4D4A9-78B6-4AAA-9FF6-1D7392A4350D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EFC4D4A9-78B6-4AAA-9FF6-1D7392A4350D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107767.05205202</real>
+			<key>timeStoppedRecording</key>
+			<real>637107768.07518697</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>EFC4D4A9-78B6-4AAA-9FF6-1D7392A4350D</string>
+		</dict>
+		<key>F4FA477D-152D-41B5-8EDF-5E9EAFBEB577</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F4FA477D-152D-41B5-8EDF-5E9EAFBEB577.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637107691.180902</real>
+			<key>timeStoppedRecording</key>
+			<real>637107691.98435402</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>F4FA477D-152D-41B5-8EDF-5E9EAFBEB577</string>
+		</dict>
+		<key>FAB5A2A2-2640-48C6-AB7B-ACBDCA8C2FE9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FAB5A2A2-2640-48C6-AB7B-ACBDCA8C2FE9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105439.60673404</real>
+			<key>timeStoppedRecording</key>
+			<real>637105440.50727701</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>FAB5A2A2-2640-48C6-AB7B-ACBDCA8C2FE9</string>
+		</dict>
+		<key>FC11AA40-757A-4C6F-AC10-EEED40DA7F87</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FC11AA40-757A-4C6F-AC10-EEED40DA7F87.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637105190.673334</real>
+			<key>timeStoppedRecording</key>
+			<real>637105192.24006295</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>FC11AA40-757A-4C6F-AC10-EEED40DA7F87</string>
+		</dict>
+		<key>FC5DDE98-C77B-42A7-9181-6E211708907F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FC5DDE98-C77B-42A7-9181-6E211708907F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637110866.558164</real>
+			<key>timeStoppedRecording</key>
+			<real>637110867.792799</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>FC5DDE98-C77B-42A7-9181-6E211708907F</string>
+		</dict>
+		<key>FF563757-1A84-47C7-AD97-8EF4863E888A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FF563757-1A84-47C7-AD97-8EF4863E888A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>OpenGL project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>OpenGLTest</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build OpenGLTest</string>
+			<key>timeStartedRecording</key>
+			<real>637104988.41844201</real>
+			<key>timeStoppedRecording</key>
+			<real>637104989.89997101</real>
+			<key>title</key>
+			<string>Build OpenGLTest</string>
+			<key>uniqueIdentifier</key>
+			<string>FF563757-1A84-47C7-AD97-8EF4863E888A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
