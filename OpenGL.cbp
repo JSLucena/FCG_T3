@@ -61,13 +61,6 @@
 			<Add option="-Wno-narrowing" />
 			<Add option="-Wno-deprecated-declarations" />
 		</Compiler>
-		<Unit filename="Poligono.cpp" />
-		<Unit filename="Poligono.h" />
-		<Unit filename="Ponto.cpp" />
-		<Unit filename="Ponto.h" />
-		<Unit filename="ProgramaBasico3D.cpp" />
-		<Unit filename="Temporizador.cpp" />
-		<Unit filename="Temporizador.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

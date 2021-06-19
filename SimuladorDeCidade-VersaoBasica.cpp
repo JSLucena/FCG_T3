@@ -1,13 +1,14 @@
 // **********************************************************************
-// PUCRS/Escola PolitÈcnica
-// COMPUTA«√O GR¡FICA
+// PUCRS/Escola Politécnica
+// COMPUTAÇÃO GRÁFICA
 //
-// Programa b·sico para criar aplicacoes 3D em OpenGL
+// Simulador de Cidade
 //
 // Marcio Sarroglia Pinho
 // pinho@pucrs.br
 // **********************************************************************
 
+#include <cstdlib>
 #include <iostream>
 #include <cmath>
 #include <ctime>
@@ -34,6 +35,8 @@ using namespace std;
 Temporizador T;
 double AccumDeltaT=0;
 
+#include "Ponto.h"
+#include "ListaDeCoresRGB.h"
 
 GLfloat AspectRatio, angulo=0;
 
@@ -41,8 +44,8 @@ GLfloat AspectRatio, angulo=0;
 // 0: Projecao Paralela Ortografica; 1: Projecao Perspectiva
 // A funcao "PosicUser" utiliza esta variavel. O valor dela eh alterado
 // pela tecla 'p'
-int ModoDeProjecao = 1;
 
+int ModoDeProjecao = 1;
 
 // Controle do modo de projecao
 // 0: Wireframe; 1: Faces preenchidas
@@ -53,14 +56,49 @@ int ModoDeExibicao = 1;
 double nFrames=0;
 double TempoTotal=0;
 
+Ponto Curva1[3];
+
+// Qtd de ladrilhos do piso. Inicialzada na INIT
+int QtdX;
+int QtdZ;
+
+
+// Representa o conteudo de uma celula do piso
+class Elemento{
+public:
+    int tipo;
+    int cor;
+    float altura;
+};
+
+// codigos que definem o o tipo do elemento que está em uma célula
+#define VAZIO 0
+#define PREDIO 10
+#define RUA 20
+#define COMBUSTIVEL 30
+
+// Matriz que armazena informacoes sobre o que existe na cidade
+Elemento Cidade[100][100];
+
+// **********************************************************************
+//
+// **********************************************************************
+void InicializaCidade(int QtdX, int QtdZ)
+{
+    for (int i=0;i<QtdZ;i++)
+        for (int j=0;j<QtdX;j++)
+            Cidade[i][j].tipo = VAZIO;
+}
+
+
 // **********************************************************************
 //  void init(void)
-//        Inicializa os parametros globais de OpenGL
+//    Inicializa os parametros globais de OpenGL
 // **********************************************************************
 void init(void)
 {
     glClearColor(0.0f, 0.0f, 1.0f, 1.0f); // Fundo de tela preto
-
+   
     glShadeModel(GL_SMOOTH);
     //glShadeModel(GL_FLAT);
     glColorMaterial ( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
@@ -77,6 +115,17 @@ void init(void)
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     }
     glEnable(GL_NORMALIZE);
+    
+    Curva1[0] = Ponto (-6,0,1);
+    Curva1[1] = Ponto (0,10,1);
+    Curva1[2] = Ponto (6,0,1);
+    
+    srand((unsigned int)time(NULL));
+    
+    QtdX = 100;
+    QtdZ = 100;
+    
+    InicializaCidade(QtdX, QtdZ);
 }
 
 // **********************************************************************
@@ -90,7 +139,7 @@ void animate()
     TempoTotal += dt;
     nFrames++;
 
-    if (AccumDeltaT > 1.0/30) // fixa a atualizaÁ„o da tela em 30
+    if (AccumDeltaT > 1.0/30) // fixa a atualização da tela em 30
     {
         AccumDeltaT = 0;
         angulo+= 1;
@@ -106,7 +155,36 @@ void animate()
     }
 }
 
-
+// **********************************************************************
+Ponto CalculaBezier3(Ponto PC[], double t)
+{
+    Ponto P;
+    double UmMenosT = 1-t;
+    
+    P =  PC[0] * UmMenosT * UmMenosT + PC[1] * 2 * UmMenosT * t + PC[2] * t*t;
+    //P.z = 5;
+    return P;
+}
+// **********************************************************************
+void TracaBezier3Pontos()
+{
+    double t=0.0;
+    double DeltaT = 1.0/10;
+    Ponto P;
+    //cout << "DeltaT: " << DeltaT << endl;
+    glBegin(GL_LINE_STRIP);
+    
+    while(t<1.0)
+    {
+        P = CalculaBezier3(Curva1, t);
+        glVertex3f(P.x, P.y, P.z);
+        t += DeltaT;
+       // P.imprime(); cout << endl;
+    }
+    P = CalculaBezier3(Curva1, 1.0); // faz o fechamento da curva
+    glVertex3f(P.x, P.y, P.z);
+    glEnd();
+}
 // **********************************************************************
 //  void DesenhaCubo()
 //
@@ -153,29 +231,74 @@ void DesenhaCubo()
     glVertex3f(-1.0f,  1.0f, -1.0f);
     glEnd();
 }
-void DesenhaParalelepipedo()
+
+// **********************************************************************
+//  Desenha um prédio no meio de uam célula
+// **********************************************************************
+void DesenhaPredio(float altura)
 {
     glPushMatrix();
-        glTranslatef(0,0,-1);
-        glScalef(1,1,2);
+       // glTranslatef(0, -1, 0);
+        glScalef(0.2, altura, 0.2);
+        glTranslatef(0, 1, 0);
         DesenhaCubo();
     glPopMatrix();
+    
 }
-void DesenhaPiso()
+// **********************************************************************
+// void DesenhaLadrilho(int corBorda, int corDentro)
+// Desenha uma célula do piso.
+// Eh possivel definir a cor da borda e do interior do piso
+// O ladrilho tem largula 1, centro no (0,0,0) e está sobre o plano XZ
+// **********************************************************************
+void DesenhaLadrilho(int corBorda, int corDentro)
 {
+    defineCor(corBorda); // desenha QUAD preenchido
     glBegin ( GL_QUADS );
-    glNormal3f(0,1,0);
-    glVertex3f(-1.0f,  0.0f, -1.0f);
-    glVertex3f(-1.0f,  0.0f,  1.0f);
-    glVertex3f( 1.0f,  0.0f,  1.0f);
-    glVertex3f( 1.0f,  0.0f, -1.0f);
+        glNormal3f(0,1,0);
+        glVertex3f(-0.5f,  0.0f, -0.5f);
+        glVertex3f(-0.5f,  0.0f,  0.5f);
+        glVertex3f( 0.5f,  0.0f,  0.5f);
+        glVertex3f( 0.5f,  0.0f, -0.5f);
+    glEnd();
+    
+    defineCor(corDentro);
+    glBegin ( GL_LINE_STRIP ); // desenha borda do ladrilho
+        glNormal3f(0,1,0);
+        glVertex3f(-0.5f,  0.0f, -0.5f);
+        glVertex3f(-0.5f,  0.0f,  0.5f);
+        glVertex3f( 0.5f,  0.0f,  0.5f);
+        glVertex3f( 0.5f,  0.0f, -0.5f);
     glEnd();
 
 }
+
+// **********************************************************************
+// DesenhaCidade(int nLinhas, int nColunas)
+// QtdX: nro de células em X
+// QtdZ: nro de células em Z
+// Desenha elementos que compiem a cidade
+// **********************************************************************
+void DesenhaCidade(int QtdX, int QtdZ)
+{
+    
+    glPushMatrix();
+        glTranslatef(0, 0, 0);
+        DesenhaLadrilho(Red, Black);
+        defineCor(Yellow);
+        DesenhaPredio(2);
+    glPopMatrix();
+    glPushMatrix();
+        glTranslatef(-1, 0, 0);
+        DesenhaLadrilho(Gray, Black);
+        defineCor(Green);
+        DesenhaPredio(1.2);
+    glPopMatrix();
+}
+
+
 // **********************************************************************
 //  void DefineLuz(void)
-//
-//
 // **********************************************************************
 void DefineLuz(void)
 {
@@ -183,19 +306,19 @@ void DefineLuz(void)
   GLfloat LuzAmbiente[]   = {0.4, 0.4, 0.4f } ;
   GLfloat LuzDifusa[]   = {0.7, 0.7, 0.7};
   GLfloat LuzEspecular[] = {0.9f, 0.9f, 0.9 };
-  GLfloat PosicaoLuz0[]  = {0.0f, 3.0f, 5.0f };  // PosiÁ„o da Luz
+  GLfloat PosicaoLuz0[]  = {0.0f, 3.0f, 5.0f };  // Posição da Luz
   GLfloat Especularidade[] = {1.0f, 1.0f, 1.0f};
 
    // ****************  Fonte de Luz 0
 
  glEnable ( GL_COLOR_MATERIAL );
 
-   // Habilita o uso de iluminaÁ„o
+   // Habilita o uso de iluminação
   glEnable(GL_LIGHTING);
 
   // Ativa o uso da luz ambiente
   glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LuzAmbiente);
-  // Define os parametros da luz n˙mero Zero
+  // Define os parametros da luz número Zero
   glLightfv(GL_LIGHT0, GL_AMBIENT, LuzAmbiente);
   glLightfv(GL_LIGHT0, GL_DIFFUSE, LuzDifusa  );
   glLightfv(GL_LIGHT0, GL_SPECULAR, LuzEspecular  );
@@ -208,9 +331,9 @@ void DefineLuz(void)
   // Define a reflectancia do material
   glMaterialfv(GL_FRONT,GL_SPECULAR, Especularidade);
 
-  // Define a concentraÁ„oo do brilho.
+  // Define a concentraçãoo do brilho.
   // Quanto maior o valor do Segundo parametro, mais
-  // concentrado ser· o brilho. (Valores v·lidos: de 0 a 128)
+  // concentrado será o brilho. (Valores válidos: de 0 a 128)
   glMateriali(GL_FRONT,GL_SHININESS,51);
 
 }
@@ -222,36 +345,25 @@ void DefineLuz(void)
 // **********************************************************************
 void PosicUser()
 {
-	/*
-     // Define os par‚metros da projeÁ„o Perspectiva
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(90,AspectRatio,0.01,200);
 
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	gluLookAt(0, 0, 10,   // PosiÁ„o do Observador
-              0,0,0,     // PosiÁ„o do Alvo
-			  0.0f,1.0f,0.0f);
-    */
-    // Define os par‚metros da projeÁ„o Perspectiva
+    // Define os parâmetros da projeção Perspectiva
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    // Define o volume de visualizaÁ„o sempre a partir da posicao do
+    // Define o volume de visualização sempre a partir da posicao do
     // observador
     if (ModoDeProjecao == 0)
-        glOrtho(-10, 10, -10, 10, 0, 50); // Projecao paralela Orthografica
-    else gluPerspective(90,AspectRatio,0.01,50); // Projecao perspectiva
+        glOrtho(-10, 10, -10, 10, 0, 20); // Projecao paralela Orthografica
+    else gluPerspective(90,AspectRatio,0.01,1500); // Projecao perspectiva
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
+    
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(0, 0, 10,   // PosiÁ„o do Observador
-              0,0,0,     // PosiÁ„o do Alvo
-              0.0f,1.0f,0.0f);
+    gluLookAt(0, 5, 8,   // Posição do Observador
+              0,0,0,     // Posição do Alvo
+              0.0f,1.0f,0.0f); // UP
 
 
 }
@@ -263,10 +375,10 @@ void PosicUser()
 void reshape( int w, int h )
 {
 
-	// Evita divis„o por zero, no caso de uam janela com largura 0.
+	// Evita divisão por zero, no caso de uam janela com largura 0.
 	if(h == 0) h = 1;
-    // Ajusta a relaÁ„o entre largura e altura para evitar distorÁ„o na imagem.
-    // Veja funÁ„o "PosicUser".
+    // Ajusta a relação entre largura e altura para evitar distorção na imagem.
+    // Veja função "PosicUser".
 	AspectRatio = 1.0f * w / h;
 	// Reset the coordinate system before modifying
 	glMatrixMode(GL_PROJECTION);
@@ -292,23 +404,14 @@ void display( void )
 	DefineLuz();
 
 	PosicUser();
-
+    glLineWidth(2);
+	
 	glMatrixMode(GL_MODELVIEW);
 
-	glPushMatrix();
-		glTranslatef ( 5.0f, 0.0f, 3.0f );
-        glRotatef(angulo,0,1,0);
-		glColor3f(0.5f,0.0f,0.0f); // Vermelho
-		DesenhaCubo();
-	glPopMatrix();
-
-	glPushMatrix();
-		glTranslatef ( -4.0f, 0.0f, 2.0f );
-		glRotatef(angulo,0,1,0);
-		glColor3f(0.6156862745, 0.8980392157, 0.9803921569); // Azul claro
-
-		DesenhaCubo();
-	glPopMatrix();
+    glColor3f(1,1,1);
+    TracaBezier3Pontos();
+    
+    DesenhaCidade(QtdX,QtdZ);
 
 	glutSwapBuffers();
 }
@@ -321,11 +424,11 @@ void display( void )
 // **********************************************************************
 void keyboard ( unsigned char key, int x, int y )
 {
-	switch ( key )
+	switch ( key ) 
 	{
     case 27:        // Termina o programa qdo
       exit ( 0 );   // a tecla ESC for pressionada
-      break;
+      break;        
     case 'p':
             ModoDeProjecao = !ModoDeProjecao;
             glutPostRedisplay();
@@ -342,19 +445,19 @@ void keyboard ( unsigned char key, int x, int y )
 }
 
 // **********************************************************************
-//  void arrow_keys ( int a_keys, int x, int y )
+//  void arrow_keys ( int a_keys, int x, int y )  
 //
 //
 // **********************************************************************
-void arrow_keys ( int a_keys, int x, int y )
+void arrow_keys ( int a_keys, int x, int y )  
 {
-	switch ( a_keys )
+	switch ( a_keys ) 
 	{
 		case GLUT_KEY_UP:       // When Up Arrow Is Pressed...
 			glutFullScreen ( ); // Go Into Full Screen Mode
 			break;
 	    case GLUT_KEY_DOWN:     // When Down Arrow Is Pressed...
-			glutInitWindowSize  ( 700, 500 );
+			glutInitWindowSize  ( 700, 500 ); 
 			break;
 		default:
 			break;
@@ -366,25 +469,25 @@ void arrow_keys ( int a_keys, int x, int y )
 //
 //
 // **********************************************************************
-int main ( int argc, char** argv )
+int main ( int argc, char** argv )   
 {
-	glutInit            ( &argc, argv );
+	glutInit            ( &argc, argv ); 
 	glutInitDisplayMode (GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB );
 	glutInitWindowPosition (0,0);
 	glutInitWindowSize  ( 700, 700 );
-	glutCreateWindow    ( "Computacao Grafica - Exemplo Basico 3D" );
-
+	glutCreateWindow    ( "Computacao Grafica - Exemplo Basico 3D" ); 
+		
 	init ();
     //system("pwd");
-
-	glutDisplayFunc ( display );
+	
+	glutDisplayFunc ( display );  
 	glutReshapeFunc ( reshape );
 	glutKeyboardFunc ( keyboard );
 	glutSpecialFunc ( arrow_keys );
 	glutIdleFunc ( animate );
 
-	glutMainLoop ( );
-	return 0;
+	glutMainLoop ( );          
+	return 0; 
 }
 
 
