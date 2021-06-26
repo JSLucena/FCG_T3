@@ -41,6 +41,7 @@
 					<Add option="-Wno-narrowing" />
 					<Add option="-Wno-deprecated-declarations" />
 					<Add option="-Wno-unused-but-set-variable" />
+					<Add option="-lSOIL" />
 					<Add option="-DFREEGLUT_STATIC" />
 					<Add directory="GL" />
 				</Compiler>
@@ -61,6 +62,8 @@
 			<Add option="-Wno-narrowing" />
 			<Add option="-Wno-deprecated-declarations" />
 		</Compiler>
+		<Unit filename="ImageClass.cpp" />
+		<Unit filename="ImageClass.h" />
 		<Unit filename="ListaDeCoresRGB.cpp" />
 		<Unit filename="ListaDeCoresRGB.h" />
 		<Unit filename="Ponto.cpp" />
@@ -68,6 +71,9 @@
 		<Unit filename="SimuladorDeCidade-VersaoBasica.cpp" />
 		<Unit filename="Temporizador.cpp" />
 		<Unit filename="Temporizador.h" />
+		<Unit filename="TexturaAsfalto/Texturas.h" />
+		<Unit filename="TextureClass.cpp" />
+		<Unit filename="TextureClass.h" />
 		<Unit filename="player.h" />
 		<Extensions>
 			<code_completion />

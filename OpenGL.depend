@@ -311,7 +311,8 @@
 	<GLUT/glut.h>
 	<glut.h>
 
-1624736111 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
+1624744333 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
+	"std_image.h"
 	<cstdlib>
 	<iostream>
 	<cmath>
@@ -325,12 +326,60 @@
 	"Ponto.h"
 	"ListaDeCoresRGB.h"
 	"player.h"
+	"TexturaAsfalto/Texturas.h"
 
-1624735934 f:\trabalhos\20211\cg\fcg_t3\player.h
+1624736306 f:\trabalhos\20211\cg\fcg_t3\player.h
 	<iostream>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
 	<glut.h>
 	<vector>
+
+1624742599 f:\trabalhos\20211\cg\fcg_t3\texturaasfalto\texturas.h
+
+1554980436 source:f:\trabalhos\20211\cg\fcg_t3\imageclass.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<windows.h>
+	"gl\glut.h"
+	<GLUT/glut.h>
+	"ImageClass.h"
+
+1624740626 f:\trabalhos\20211\cg\fcg_t3\imageclass.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<windows.h>
+	"gl\glut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+	"SOIL/SOIL.h"
+
+1215465208 f:\trabalhos\20211\cg\fcg_t3\soil\soil.h
+
+1559012174 source:f:\trabalhos\20211\cg\fcg_t3\textureclass.cpp
+	"TextureClass.h"
+
+1559011704 f:\trabalhos\20211\cg\fcg_t3\textureclass.h
+	"ImageClass.h"
+
+1624742780 f:\trabalhos\20211\cg\fcg_t3\std_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
 

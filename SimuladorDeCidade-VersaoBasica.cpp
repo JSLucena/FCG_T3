@@ -8,6 +8,11 @@
 // pinho@pucrs.br
 // **********************************************************************
 
+#define STB_IMAGE_IMPLEMENTATION
+#include "std_image.h"
+
+
+
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
@@ -38,6 +43,7 @@ double AccumDeltaT=0;
 #include "Ponto.h"
 #include "ListaDeCoresRGB.h"
 #include "player.h"
+#include "TexturaAsfalto/Texturas.h"
 
 GLfloat AspectRatio, angulo=0;
 GLfloat AlturaViewportDeMensagens = 0.2; // percentual em relacao ˆ altura da tela
@@ -115,6 +121,56 @@ float fuel = 100.0;
 
 
 
+
+
+unsigned int texture;
+int width, height, nrChannels;
+//unsigned char *data = stbi_load("TexturaAsfalto/None.png", &width, &height, &nrChannels, 0);
+GLuint texturesIDS[LAST_IMG];
+void loadTexture()
+{
+
+
+
+  for(int i=0;i<LAST_IMG;i++)
+  {
+
+      glGenTextures(i, &texturesIDS[i]);
+    texturesIDS[1] = i;
+    glBindTexture(GL_TEXTURE_2D, texturesIDS[i]);
+    // set the texture wrapping/filtering options (on the currently bound texture object)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // load and generate the texture
+
+
+
+    // idTexturaRua[i] = LoadTexture(nomeTexturas[i].c_str());
+
+    string nameS = "TexturaAsfalto/"+nomeTexturas[i];
+    const char *name = nameS.c_str();
+    unsigned char *data = stbi_load( name, &width, &height, &nrChannels, 0);
+
+    if (data)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+      //  glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(data);
+  }
+
+}
+
+
+
+
+
 void playerHandler()
 {
     glPushMatrix();
@@ -183,9 +239,9 @@ string nome = "mapa.txt";
     unsigned int linhas, colunas;
 
     input >> linhas >> colunas;
-    for (int i=0; i< linhas; i++)
+    for (int j=0; j< linhas; j++)
     {
-        for(int j = 0; j < colunas; j++)
+        for(int i = 0; i < colunas; i++)
         {
             double x,y;
         // Le cada elemento da linha
@@ -214,6 +270,35 @@ string nome = "mapa.txt";
     cout << "Mapa lido com sucesso!" << endl;
 
 
+    nome = "textureMap.txt";
+    input.open(nome, ios::in);
+    if (!input)
+    {
+        cout << "Erro ao abrir " << nome << ". " << endl;
+        exit(0);
+    }
+    cout << "Lendo arquivo " << nome << "...";
+
+    input >> linhas >> colunas;
+    for (int j=0; j< linhas; j++)
+    {
+        for(int i = 0; i< colunas; i++)
+        {
+            double x,y;
+        // Le cada elemento da linha
+        input >> Cidade[i][j].texID;
+
+
+        if(!input)
+            break;
+        }
+
+    }
+    input.close();
+
+    cout << "texture map lido com sucesso!" << endl;
+
+    loadTexture();
 }
 
 
@@ -230,6 +315,12 @@ void init(void)
     glColorMaterial ( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
     glEnable(GL_DEPTH_TEST);
     glEnable (GL_CULL_FACE);
+
+        // Habilitar o uso de texturas
+     glEnable ( GL_TEXTURE_2D );
+     // Definir a forma de armazenamento dos pixels na textura (1= alinhamento por byte)
+     glPixelStorei ( GL_UNPACK_ALIGNMENT, 1 );
+
 
     if (ModoDeExibicao) // Faces Preenchidas??
     {
@@ -257,6 +348,7 @@ void init(void)
     truckLookingAt[1] = 0;
     truckLookingAt[2] = 0;
     dir = Ponto(truckLookingAt[0],truckLookingAt[1],truckLookingAt[2]);
+  //  CarregaTexturas();
 
 }
 
@@ -438,6 +530,8 @@ void DesenhaCidade(int QtdX, int QtdZ)
         for (int j=0;j<QtdX;j++)
             {
                 glPushMatrix();
+                  //   glBindTexture ( GL_TEXTURE_2D, idTexturaRua[Cidade[i][j].texID]);
+                    glBindTexture ( GL_TEXTURE_2D, texturesIDS[Cidade[i][j].texID-1]);
                     glTranslatef(i,0,j);
                     DesenhaLadrilho(Cidade[i][j].cor,Black);
                     if(Cidade[i][j].tipo == PREDIO)
