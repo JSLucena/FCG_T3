@@ -12,6 +12,7 @@
 #include <iostream>
 #include <cmath>
 #include <ctime>
+#include <fstream>
 
 using namespace std;
 
@@ -40,8 +41,6 @@ double AccumDeltaT=0;
 #include "player.h"
 
 GLfloat AspectRatio, angulo=0;
-GLfloat AlturaViewportDeMensagens = 0.2; // percentual em relacao à altura da tela
-
 
 // Controle do modo de projecao
 // 0: Projecao Paralela Ortografica; 1: Projecao Perspectiva
@@ -49,7 +48,7 @@ GLfloat AlturaViewportDeMensagens = 0.2; // percentual em relacao à altura da te
 // pela tecla 'p'
 
 int ModoDeProjecao = 1;
-int playerView = 0;
+int playerView = 1;
 
 // Controle do modo de projecao
 // 0: Wireframe; 1: Faces preenchidas
@@ -65,7 +64,9 @@ Ponto Curva1[3];
 // Qtd de ladrilhos do piso. Inicialzada na INIT
 int QtdX;
 int QtdZ;
+float speed;
 
+float truckLookingAt[3];
 
 // Representa o conteudo de uma celula do piso
 class Elemento{
@@ -74,7 +75,6 @@ public:
     int cor;
     int corPredio;
     float altura;
-    int texID;
 };
 
 // codigos que definem o o tipo do elemento que está em uma célula
@@ -83,64 +83,27 @@ public:
 #define RUA 1
 #define COMBUSTIVEL 3
 
-#define truckSPD 0.05
-
 // Matriz que armazena informacoes sobre o que existe na cidade
 Elemento Cidade[100][100];
-// ***********************************************
-//  void calcula_ponto(Ponto p, Ponto &out)
-//
-//  Esta função calcula as coordenadas
-//  de um ponto no sistema de referência do
-//  universo (SRU), ou seja, aplica as rotações,
-//  escalas e translações a um ponto no sistema
-//  de referência do objeto SRO.
-//  Para maiores detalhes, veja a página
-//  https://www.inf.pucrs.br/pinho/CG/Aulas/OpenGL/Interseccao/ExerciciosDeInterseccao.html
 
-// ***********************************************
+
 Player  truck = Player(0,0);
 
-float truckLookingAt[3];
-Ponto dir;
-float speed;
+
 
 void playerHandler()
 {
     glPushMatrix();
 
+        truckLookingAt[0] = truck.posX + cos(truck.angle*3.14/180);
+        truckLookingAt[1] = 0.2;
+        truckLookingAt[2] = truck.posZ + sin(truck.angle*3.14/180);
 
-        truck.updateTarget(dir);
         truck.rotateEntity();
         truck.movePlayer(speed);
         truck.updateHitbox();
-
-        dir = truck.dirPoint;
     glPopMatrix();
 }
-
-
-
-
-void CalculaPonto(Ponto p, Ponto &out) {
-
-    GLfloat ponto_novo[4];
-    GLfloat matriz_gl[4][4];
-    int  i;
-
-    glGetFloatv(GL_MODELVIEW_MATRIX,&matriz_gl[0][0]);
-
-    for(i=0; i<4; i++) {
-        ponto_novo[i] = matriz_gl[0][i] * p.x +
-                        matriz_gl[1][i] * p.y +
-                        matriz_gl[2][i] * p.z +
-                        matriz_gl[3][i];
-    }
-    out.x = ponto_novo[0];
-    out.y = ponto_novo[1];
-    out.z = ponto_novo[2];
-}
-
 // **********************************************************************
 //
 // **********************************************************************
@@ -150,7 +113,8 @@ void InicializaCidade(int QtdX, int QtdZ)
         for (int j=0;j<QtdX;j++)
             Cidade[i][j].tipo = VAZIO;
 
-string nome = "mapa.txt";
+
+    string nome = "mapa.txt";
     ifstream input;
     input.open(nome, ios::in);
     if (!input)
@@ -208,15 +172,16 @@ void init(void)
     glShadeModel(GL_SMOOTH);
     //glShadeModel(GL_FLAT);
     glColorMaterial ( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
-    glEnable(GL_DEPTH_TEST);
-    glEnable (GL_CULL_FACE);
-
     if (ModoDeExibicao) // Faces Preenchidas??
     {
+        glEnable(GL_DEPTH_TEST);
+        glEnable (GL_CULL_FACE );
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     }
     else
     {
+        glEnable(GL_DEPTH_TEST);
+        glEnable (GL_CULL_FACE );
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     }
     glEnable(GL_NORMALIZE);
@@ -233,10 +198,11 @@ void init(void)
     InicializaCidade(QtdX, QtdZ);
 
 
-    truckLookingAt[0] = 1;
-    truckLookingAt[1] = 0;
-    truckLookingAt[2] = 0;
-    dir = Ponto(truckLookingAt[0],truckLookingAt[1],truckLookingAt[2]);
+    truckLookingAt[0] = truck.posX + 1;
+    truckLookingAt[1] = 0.1;
+    truckLookingAt[2] = truck.posZ;
+
+
 
 }
 
@@ -365,17 +331,12 @@ void DesenhaPredio(float altura)
 // **********************************************************************
 void DesenhaLadrilho(int corBorda, int corDentro)
 {
-
     defineCor(corBorda); // desenha QUAD preenchido
     glBegin ( GL_QUADS );
         glNormal3f(0,1,0);
-        glTexCoord2f(0.0f, 1.0f);
         glVertex3f(-0.5f,  0.0f, -0.5f);
-        glTexCoord2f(0.0f, 0.0f);
         glVertex3f(-0.5f,  0.0f,  0.5f);
-        glTexCoord2f(1.0f, 0.0f);
         glVertex3f( 0.5f,  0.0f,  0.5f);
-        glTexCoord2f(1.0f, 1.0f);
         glVertex3f( 0.5f,  0.0f, -0.5f);
     glEnd();
 
@@ -398,8 +359,7 @@ void DesenhaLadrilho(int corBorda, int corDentro)
 // **********************************************************************
 void DesenhaCidade(int QtdX, int QtdZ)
 {
-
-    /*
+/*
     glPushMatrix();
         glTranslatef(0, 0, 0);
         DesenhaLadrilho(Red, Black);
@@ -498,8 +458,8 @@ void PosicUser()
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(truck.Posicao.x , 0.35, truck.Posicao.z,   // Posição do Observador
-              truck.target.x,truck.target.y,truck.target.z,     // Posição do Alvo
+    gluLookAt(truck.posX , 0.35, truck.posZ,   // Posição do Observador
+              truckLookingAt[0],truckLookingAt[1],truckLookingAt[2],     // Posição do Alvo
               0.0f,1.0f,0.0f); // UP
     }
     else
@@ -510,10 +470,12 @@ void PosicUser()
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(-1, 6, 6,   // Posição do Observador
-              truck.Posicao.x,0,truck.Posicao.z,     // Posição do Alvo
+    gluLookAt(-1, 6, -1,   // Posição do Observador
+              truck.posX,0,truck.posZ,     // Posição do Alvo
               0.0f,1.0f,0.0f); // UP
     }
+
+
 
 
 }
@@ -534,75 +496,10 @@ void reshape( int w, int h )
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	// Seta a viewport para ocupar toda a janela
-    //glViewport(0, 0, w, h);
-    glViewport(0, h*AlturaViewportDeMensagens, w, h-h*AlturaViewportDeMensagens);
-
+    glViewport(0, 0, w, h);
     //cout << "Largura" << w << endl;
 
 	PosicUser();
-
-}
-// **********************************************************************
-//
-// **********************************************************************
-void printString(string s, int posX, int posY, int cor)
-{
-    defineCor(cor);
-
-    glRasterPos3i(posX, posY, 0); //define posicao na tela
-    for (int i = 0; i < s.length(); i++)
-    {
-//GLUT_BITMAP_HELVETICA_10,
-        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, s[i]);
-    }
-
-}
-// **********************************************************************
-//
-// **********************************************************************
-void DesenhaEm2D()
-{
-    int ativarLuz = false;
-    if (glIsEnabled(GL_LIGHTING))
-    {
-        glDisable(GL_LIGHTING);
-        ativarLuz = true;
-    }
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-
-    // Salva o tamanho da janela
-    int w = glutGet(GLUT_WINDOW_WIDTH);
-    int h = glutGet(GLUT_WINDOW_HEIGHT);
-
-    // Define a area a ser ocupada pela area OpenGL dentro da Janela
-    glViewport(0, 0, w, h*AlturaViewportDeMensagens); // a janela de mensagens fica na parte de baixo da janela
-
-    // Define os limites logicos da area OpenGL dentro da Janela
-    glOrtho(0,10, 0,10, 0,1);
-
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-
-    // Desenha linha que Divide as áreas 2D e 3D
-    defineCor(Yellow);
-    glLineWidth(5);
-    glBegin(GL_LINES);
-        glVertex2f(0,10);
-        glVertex2f(10,10);
-    glEnd();
-
-    printString("Amarelo", 0, 0, Yellow);
-    printString("Vermelho", 4, 2, Red);
-    printString("Verde", 8, 4, Green);
-
-    // Resataura os parâmetro que foram alterados
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glViewport(0, h*AlturaViewportDeMensagens, w, h-h*AlturaViewportDeMensagens);
-
-    if (ativarLuz)
-        glEnable(GL_LIGHTING);
 
 }
 
@@ -627,8 +524,8 @@ void display( void )
     TracaBezier3Pontos();
 
     playerHandler();
+
     DesenhaCidade(QtdX,QtdZ);
-   // DesenhaEm2D();
 
 	glutSwapBuffers();
 }
@@ -661,7 +558,7 @@ void keyboard ( unsigned char key, int x, int y )
             break;
     case ' ':
             if(speed == 0)
-                speed = truckSPD;
+                speed = 0.01;
             else
                 speed = 0;
             cout << speed;

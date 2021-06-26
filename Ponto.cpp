@@ -7,7 +7,7 @@
 //
 
 #include "Ponto.h"
-#include "math.h"
+#include <math.h>
 Ponto::Ponto ()
 {
     x=y=z=0;

@@ -274,8 +274,9 @@
 1623925822 f:\trabalhos\20211\cg\fcg_t3\ponto.h
 	<iostream>
 
-1615413732 source:f:\trabalhos\20211\cg\fcg_t3\ponto.cpp
+1624731867 source:f:\trabalhos\20211\cg\fcg_t3\ponto.cpp
 	"Ponto.h"
+	<math.h>
 
 1584988348 source:f:\trabalhos\20211\cg\fcg_t3\temporizador.cpp
 	"Temporizador.h"
@@ -310,7 +311,7 @@
 	<GLUT/glut.h>
 	<glut.h>
 
-1623233956 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
+1624736111 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
 	<cstdlib>
 	<iostream>
 	<cmath>
@@ -323,4 +324,13 @@
 	"Temporizador.h"
 	"Ponto.h"
 	"ListaDeCoresRGB.h"
+	"player.h"
+
+1624735934 f:\trabalhos\20211\cg\fcg_t3\player.h
+	<iostream>
+	<windows.h>
+	<glut.h>
+	<GLUT/glut.h>
+	<glut.h>
+	<vector>
 

@@ -61,6 +61,14 @@
 			<Add option="-Wno-narrowing" />
 			<Add option="-Wno-deprecated-declarations" />
 		</Compiler>
+		<Unit filename="ListaDeCoresRGB.cpp" />
+		<Unit filename="ListaDeCoresRGB.h" />
+		<Unit filename="Ponto.cpp" />
+		<Unit filename="Ponto.h" />
+		<Unit filename="SimuladorDeCidade-VersaoBasica.cpp" />
+		<Unit filename="Temporizador.cpp" />
+		<Unit filename="Temporizador.h" />
+		<Unit filename="player.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
