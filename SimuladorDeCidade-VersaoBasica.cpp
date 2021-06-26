@@ -81,7 +81,18 @@ public:
     int corPredio;
     float altura;
     int texID;
+    bool hasFuel;
 };
+
+class Combustivel{
+public:
+    int posX;
+    int posZ;
+    int rotation;
+    bool isAlive = false;
+};
+
+
 
 // codigos que definem o o tipo do elemento que est‡ em uma cŽlula
 #define VAZIO 0
@@ -121,7 +132,8 @@ float fuel = 100.0;
 
 
 
-
+Combustivel combArray[10];
+int combCount = 0;
 
 unsigned int texture;
 int width, height, nrChannels;
@@ -167,9 +179,118 @@ void loadTexture()
 
 }
 
+int intersec2d(Ponto k, Ponto l, Ponto m, Ponto n, double &s, double &t)
+{
+    double det;
+
+    det = (n.x - m.x) * (l.y - k.y)  -  (n.y - m.y) * (l.x - k.x);
+
+    if (det == 0.0)
+        return 0 ; // n‹o h‡ intersec‹o
+
+    s = ((n.x - m.x) * (m.y - k.y) - (n.y - m.y) * (m.x - k.x))/ det ;
+    t = ((l.x - k.x) * (m.y - k.y) - (l.y - k.y) * (m.x - k.x))/ det ;
+
+    return 1; // h‡ intersec‹o
+}
+
+// **********************************************************************
+bool HaInterseccao(Ponto k, Ponto l, Ponto m, Ponto n)
+{
+    int ret;
+    double s,t;
+    ret = intersec2d( k,  l,  m,  n, s, t);
+    if (!ret) return false;
+    if (s>=0.0 && s <=1.0 && t>=0.0 && t<=1.0)
+        return true;
+    else return false;
+}
 
 
 
+
+
+
+
+
+
+bool collide()
+{
+    bool bateu;
+    /*
+     for (int i=0;i<QtdZ;i++)
+        for (int j=0;j<QtdX;j++)
+        {
+            if(Cidade[i][j].tipo == PREDIO || Cidade[i][j].tipo == VAZIO)
+            {
+
+                Ponto P1 = Ponto(i+1.0,0,j+1.0);
+                Ponto P2 = Ponto(i+1.0,0,j-1.0);
+
+
+                bateu = HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+                if(bateu);
+                    return true;
+                P1 = Ponto(i-1.0,0,j-1.0);
+                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+                if(bateu);
+                    return true;
+                P2 = Ponto(i-1.0,0,j+1.0);
+                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+                if(bateu);
+                    return true;
+                P1 = Ponto(i+1.0,0,j+1.0);
+                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+                if(bateu);
+                    return true;
+            }
+        }
+        */
+    int tileFinderX, tileFinderZ;
+    tileFinderX = truck.target.x;
+    tileFinderZ = truck.target.z;
+
+    if(Cidade[tileFinderX][tileFinderZ].tipo == PREDIO || Cidade[tileFinderX][tileFinderZ].tipo == VAZIO)
+    {
+        Ponto P1 = Ponto(tileFinderX+1.0,0,tileFinderZ+1.0);
+        Ponto P2 = Ponto(tileFinderX+1.0,0,tileFinderZ-1.0);
+        cout << "TRUCK:";
+        truck.Posicao.imprime();
+         cout << endl;
+        Ponto P3 = truck.Posicao + truck.dirPoint * speed;
+        cout << "TRUCK+:";
+        P3.imprime();
+        cout << endl;
+
+        P2.imprime();
+        P1.imprime();
+
+        bateu = HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+        cout << bateu;
+        if(bateu)
+            return true;
+        P1 = Ponto(tileFinderX-1.0,0,tileFinderZ-1.0);
+        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+        cout << bateu;
+        if(bateu)
+            return true;
+        P2 = Ponto(tileFinderX-1.0,0,tileFinderZ+1.0);
+        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+        cout << bateu;
+        if(bateu)
+            return true;
+        P1 = Ponto(tileFinderX+1.0,0,tileFinderZ+1.0);
+        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
+        cout << bateu;
+        if(bateu)
+            return true;
+    }
+
+
+    cout << "Raycast:"<<tileFinderX << "," << tileFinderZ << endl;
+
+    return false;
+}
 
 void playerHandler()
 {
@@ -178,11 +299,24 @@ void playerHandler()
 
         truck.updateTarget(dir);
         truck.rotateEntity();
-        truck.movePlayer(speed);
-        truck.updateHitbox();
 
+
+
+        if(!collide())
+        {
+            truck.movePlayer(speed);
+
+
+        }
+        else
+        {
+            speed = 0;
+        }
+        truck.updateHitbox();
         dir = truck.dirPoint;
         obsTarget = truck.target;
+
+
 
 
         obsTarget.y +=obsOffset;
@@ -194,7 +328,55 @@ void playerHandler()
             fuel-= 0.00105;
     glPopMatrix();
 }
+void fuelDrawing(int fuelRotation)
+{
+    glPushMatrix();
+        defineCor(DarkSlateBlue);
+        glScalef(0.1,0.1,0.1);
+       // glRotatef(fuelRotation,0,1,0);
+        glBegin ( GL_QUADS );
+        // Front Face
+        glNormal3f(0,0,1);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        // Back Face
+        glNormal3f(0,0,-1);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        // Top Face
+        glNormal3f(0,1,0);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        // Bottom Face
+        glNormal3f(0,-1,0);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        // Right face
+        glNormal3f(1,0,0);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        // Left Face
+        glNormal3f(-1,0,0);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glEnd();
 
+
+
+    glPopMatrix();
+}
 
 
 
@@ -250,6 +432,17 @@ string nome = "mapa.txt";
             Cidade[i][j].cor = Bronze;
         else if (Cidade[i][j].tipo == VAZIO)
             Cidade[i][j].cor = Red;
+        else if (Cidade[i][j].tipo == COMBUSTIVEL)
+        {
+            Cidade[i][j].cor = Bronze;
+            Cidade[i][j].hasFuel = true;
+            combArray[combCount].posX = i;
+            combArray[combCount].posZ = j;
+            combArray[combCount].isAlive = true;
+            combCount++;
+
+
+        }
         else
         {
             Cidade[i][j].cor = Red;
@@ -525,7 +718,7 @@ void DesenhaCidade(int QtdX, int QtdZ)
         DesenhaPredio(1.2);
     glPopMatrix();
     */
-
+    int fuelRotation = 0;
     for (int i=0;i<QtdZ;i++)
         for (int j=0;j<QtdX;j++)
             {
@@ -539,9 +732,28 @@ void DesenhaCidade(int QtdX, int QtdZ)
                         defineCor(Cidade[i][j].corPredio);
                         DesenhaPredio(Cidade[i][j].altura);
                     }
+                    //if(Cidade[i][j].hasFuel == true)
+                   // {
+                   //     fuelDrawing(fuelRotation);
+
+                   // }
 
                 glPopMatrix();
             }
+    for(int i = 0; i < combCount;i++)
+    {
+        glPushMatrix();
+            if (combArray[i].isAlive)
+            {
+                glRotatef(fuelRotation,0,1,0);
+                glTranslatef(combArray[i].posX, 0.1, combArray[i].posZ);
+                fuelDrawing(fuelRotation);
+
+            }
+        glPopMatrix();
+
+    }
+    fuelRotation+=5;
 }
 
 

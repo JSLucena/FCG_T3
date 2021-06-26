@@ -72,9 +72,9 @@ Player::Player(float startPosX, float startPosZ)
 
 void Player::updateTarget(Ponto dir)
 {
-    cout << "dir: ";
-    dir.imprime();
-    cout << endl;
+ //   cout << "dir: ";
+ //   dir.imprime();
+ //   cout << endl;
     dir.rotacionaY(direction*TURNSTRENGTH);
 
     dirPoint = dir;
@@ -133,14 +133,14 @@ void Player::movePlayer(float speed)
    // posX = posX + speed * direction;
   // Posicao.rotacionaY(direction);
    Posicao = Posicao + dirPoint * speed;
-   Posicao.imprime();
-   cout << endl;
+//   Posicao.imprime();
+//   cout << endl;
  //  posZ = posZ + speed * sin(angle*3.14/180);
  //  posZ = posZ + speed * sin(angle);
   //  glTranslatef(posX,0,0);
 
 
-    direction = 0; ///resetamos a direcao para voltar o controle para o teclado
+
 }
 void Player::rotateEntity()
 {
@@ -155,7 +155,7 @@ void Player::rotateEntity()
         glTranslatef(-Posicao.x,0,-Posicao.z);
 
 
-
+direction = 0; ///resetamos a direcao para voltar o controle para o teclado
 
 //    Ponto P = Ponto(posX - Sprite.width/2,posZ - Sprite.height/2);
 
