@@ -103,7 +103,17 @@ Player  truck = Player(0,0);
 
 float truckLookingAt[3];
 Ponto dir;
+float obsOffset;
+Ponto obsTarget;
+
+int obsRotation = 0;
 float speed;
+
+
+int HP = 3;
+float fuel = 100.0;
+
+
 
 void playerHandler()
 {
@@ -116,6 +126,16 @@ void playerHandler()
         truck.updateHitbox();
 
         dir = truck.dirPoint;
+        obsTarget = truck.target;
+
+
+        obsTarget.y +=obsOffset;
+        obsTarget.rotacionaY(obsRotation);
+
+        if(speed == 0)
+            fuel-= 0.00035;
+        else
+            fuel-= 0.00105;
     glPopMatrix();
 }
 
@@ -499,7 +519,7 @@ void PosicUser()
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(truck.Posicao.x , 0.35, truck.Posicao.z,   // Posição do Observador
-              truck.target.x,truck.target.y,truck.target.z,     // Posição do Alvo
+              obsTarget.x,obsTarget.y,obsTarget.z,     // Posição do Alvo
               0.0f,1.0f,0.0f); // UP
     }
     else
@@ -592,9 +612,25 @@ void DesenhaEm2D()
         glVertex2f(10,10);
     glEnd();
 
-    printString("Amarelo", 0, 0, Yellow);
-    printString("Vermelho", 4, 2, Red);
-    printString("Verde", 8, 4, Green);
+
+    string buffer;
+    printString("HP:", 0, 8, White);
+    for(int i = 0; i < HP;i++)
+    {
+    printString("X", 1+i, 8, White);
+    }
+
+    int cor;
+    if(fuel > 50)
+        cor = Green;
+    else if(fuel > 25)
+        cor = Yellow;
+    else
+        cor = Red;
+    printString("Fuel:", 0, 6, cor);
+    buffer = to_string(fuel) + "%";
+    printString(buffer, 1, 6,cor);
+  //  printString("Verde", 8, 4, Green);
 
     // Resataura os parâmetro que foram alterados
     glMatrixMode(GL_PROJECTION);
@@ -628,7 +664,7 @@ void display( void )
 
     playerHandler();
     DesenhaCidade(QtdX,QtdZ);
-   // DesenhaEm2D();
+    DesenhaEm2D();
 
 	glutSwapBuffers();
 }
@@ -688,10 +724,18 @@ void arrow_keys ( int a_keys, int x, int y )
 	switch ( a_keys )
 	{
 		case GLUT_KEY_UP:       // When Up Arrow Is Pressed...
-			glutFullScreen ( ); // Go Into Full Screen Mode
+			obsOffset+= 0.2;
 			break;
 	    case GLUT_KEY_DOWN:     // When Down Arrow Is Pressed...
-			glutInitWindowSize  ( 700, 500 );
+			obsOffset-=0.2;
+			break;
+        case GLUT_KEY_LEFT:       // When left Arrow Is Pressed...
+            if(obsRotation < 135)
+                obsRotation+=5;
+			break;
+	    case GLUT_KEY_RIGHT:     // When right Arrow Is Pressed...
+	        if(obsRotation > -135)
+			obsRotation-=5;
 			break;
 		default:
 			break;
