@@ -17,6 +17,7 @@
 #include <iostream>
 #include <cmath>
 #include <ctime>
+#include <vector>
 
 using namespace std;
 
@@ -67,6 +68,10 @@ double nFrames=0;
 double TempoTotal=0;
 
 Ponto Curva1[2][3];
+Ponto Curva2[2][3];
+float tempo = 5.0;// tempo em segundos para atravessar a tela
+float TempoDaAnimacao;
+bool animando = true;
 
 // Qtd de ladrilhos do piso. Inicialzada na INIT
 int QtdX;
@@ -96,18 +101,23 @@ public:
 
 class Plane{
 public:
-    int posX;
-    int posZ;
-    int rotation;
+    Ponto posicao;
+    bool ret = false;
 
 };
 
+class Bomb{
+public:
+    Ponto direction;
+    Poligono hitbox;
+};
+void DesenhaCubo();
 // codigos que definem o o tipo do elemento que está em uma célula
 #define VAZIO 0
 #define PREDIO 2
 #define RUA 1
 #define COMBUSTIVEL 3
-
+#define BOMBCEIL 1000
 #define truckSPD 0.05
 
 // Matriz que armazena informacoes sobre o que existe na cidade
@@ -142,6 +152,12 @@ float fuel = 100.0;
 
 Combustivel combArray[10];
 int combCount = 0;
+
+Plane plane1;
+Plane plane2;
+vector<Bomb> bombs;
+int bombChance = 1;
+int bombCount;
 
 unsigned int texture;
 int width, height, nrChannels;
@@ -345,8 +361,8 @@ void playerHandler()
 void drawPlane()
 {
     glPushMatrix();
-        defineCor(DarkGreen);
-        glScalef(0.1,0.1,0.1);
+        defineCor(Gold);
+        glScalef(0.4,0.4,0.4);
        // glRotatef(fuelRotation,0,1,0);
         glBegin ( GL_QUADS );
         // Front Face
@@ -443,6 +459,7 @@ void fuelDrawing(int fuelRotation)
 
 
 
+
 void CalculaPonto(Ponto p, Ponto &out) {
 
     GLfloat ponto_novo[4];
@@ -461,7 +478,115 @@ void CalculaPonto(Ponto p, Ponto &out) {
     out.y = ponto_novo[1];
     out.z = ponto_novo[2];
 }
+void drawBomb()
+{
+    for(auto b = bombs.begin(); b != bombs.end(); b++)
+    {
+        glPushMatrix();
+        defineCor(Black);
+        glTranslatef(b->direction.x,b->direction.y,b->direction.z);
+        glScalef(0.2,0.2,0.2);
+        DesenhaCubo();
+        glPopMatrix();
+    }
+}
+void spawnBomb(Plane p)
+{
+    Bomb tempBomb;
+    tempBomb.direction = p.posicao;
+  //  bombs[bombCount].direction = p.posicao;
+    bombs.push_back(tempBomb);
 
+}
+void bombCollision()
+{
+    bool bateu;
+    for(auto b = bombs.begin(); b != bombs.end(); b++)
+    {
+        if(b->direction.y < 0.2)
+        {
+             for (int k=0;k<QtdZ;k++)
+                for (int j=0;j<QtdX;j++)
+                {   /*
+                    if(Cidade[k][j].tipo == PREDIO || Cidade[k][j].tipo == RUA)
+                    {
+                        cout << "cid:";
+                        //Cidade[k][j].hitBox.imprime();
+                        cout << k << "," << j;
+                        int aux = j;
+                        cout << endl;
+                        bateu = testaInterseccao(Cidade[k][aux].hitBox,b->hitbox);
+                        if(bateu)
+                        {
+                            cout << "bomba:";
+                            b->direction.imprime();
+                            cout << endl;
+                            cout << "cid:";
+                            //Cidade[k][j].hitBox.imprime();
+                            cout << k << "," << aux;
+                            cout << endl;
+
+
+                            Cidade[k][aux].tipo = VAZIO;
+                            Cidade[k][aux].texID = None;
+                            Cidade[k][aux].cor = Red;
+                            bombs.erase(b);
+                            return;
+                        }
+                    }
+                    */
+                     if(Cidade[j][k].tipo == PREDIO || Cidade[j][k].tipo == RUA)
+                    {
+
+                        if(b->direction.z < k+1 && b->direction.x < j+1)
+                            if(b->direction.z > k-1 && b->direction.x > j-1)
+                            {
+                                cout << "bomba:";
+                                b->direction.imprime();
+                                cout << endl;
+                                Cidade[j][k].hitBox.imprime();
+                                cout << endl;
+                                Cidade[j][k].tipo = VAZIO;
+                                Cidade[j][k].texID = None+1;
+                                Cidade[j][k].cor = Red;
+                                bombs.erase(b);
+                                return;
+                            }
+                    }
+                }
+        }
+        if(b->direction.y < -1)
+        {
+            bombs.erase(b);
+            return;
+        }
+
+    }
+}
+void moveBombs()
+{
+    if(bombs.size() > 0 )
+        for(auto b = bombs.begin(); b != bombs.end(); b++)
+        {
+            b->direction = Ponto( b->direction.x, b->direction.y - 0.1 , b->direction.z);
+          b->hitbox = Poligono();
+          b->hitbox.insereVertice(Ponto( b->direction.x+0.4,b->direction.y-0.4, b->direction.z+0.4));
+          b->hitbox.insereVertice(Ponto( b->direction.x+0.4,b->direction.y-0.4, b->direction.z-0.4));
+          b->hitbox.insereVertice(Ponto( b->direction.x-0.4,b->direction.y-0.4, b->direction.z-0.4));
+          b->hitbox.insereVertice(Ponto( b->direction.x-0.4,b->direction.y-0.4, b->direction.z+0.4));
+        }
+
+
+
+}
+
+void bombHandler()
+{
+    bombCollision();
+    moveBombs();
+    drawBomb();
+
+}
 // **********************************************************************
 //
 // **********************************************************************
@@ -606,6 +731,18 @@ void init(void)
     Curva1[1][1] = Ponto (0,4,8);
     Curva1[1][2] = Ponto (0,6,9);
 
+
+
+    Curva2[0][0] = Ponto (3,8,10);
+    Curva2[0][1] = Ponto (11,3,8);
+    Curva2[0][2] = Ponto (10,12,7);
+    Curva2[1][0] = Ponto (10,12,7);
+    Curva2[1][1] = Ponto (0,4,8);
+    Curva2[1][2] = Ponto (3,8,10);
+
+
+
+
     srand((unsigned int)time(NULL));
 
     QtdX = 12;
@@ -613,6 +750,8 @@ void init(void)
 
     InicializaCidade(QtdX, QtdZ);
 
+
+    plane1.posicao = Curva1[0][0];
 
     truckLookingAt[0] = 1;
     truckLookingAt[1] = 0;
@@ -625,29 +764,7 @@ void init(void)
 // **********************************************************************
 //
 // **********************************************************************
-void animate()
-{
-    double dt;
-    dt = T.getDeltaT();
-    AccumDeltaT += dt;
-    TempoTotal += dt;
-    nFrames++;
 
-    if (AccumDeltaT > 1.0/30) // fixa a atualização da tela em 30
-    {
-        AccumDeltaT = 0;
-        angulo+= 1;
-        glutPostRedisplay();
-    }
-    if (TempoTotal > 5.0)
-    {
-        cout << "Tempo Acumulado: "  << TempoTotal << " segundos. " ;
-        cout << "Nros de Frames sem desenho: " << nFrames << endl;
-        cout << "FPS(sem desenho): " << nFrames/TempoTotal << endl;
-        TempoTotal = 0;
-        nFrames = 0;
-    }
-}
 
 // **********************************************************************
 Ponto CalculaBezier3(Ponto PC[], double t)
@@ -679,6 +796,67 @@ void TracaBezier3Pontos(Ponto curva[3])
     glVertex3f(P.x, P.y, P.z);
     glEnd();
 }
+
+void AvancaComBezier(Plane &p, Ponto curva[3])
+{
+
+    double t;
+    t = TempoDaAnimacao/tempo;
+    if (t>1.0)
+    {
+        animando = false;
+        cout << "Tempo da Animacao: " << TempoDaAnimacao << " segundos." << endl;
+        p.posicao = curva[0]; // retorna o objeto a sua posicao inicial;
+    }
+  //  p.posicao.imprime();
+    p.posicao = CalculaBezier3(curva,t);
+
+}
+void animate()
+{
+    double dt;
+    dt = T.getDeltaT();
+    AccumDeltaT += dt;
+    TempoTotal += dt;
+    nFrames++;
+
+    if (AccumDeltaT > 1.0/30) // fixa a atualização da tela em 30
+    {
+        AccumDeltaT = 0;
+        angulo+= 1;
+        glutPostRedisplay();
+    }
+    if (TempoTotal > 5.0)
+    {
+        cout << "Tempo Acumulado: "  << TempoTotal << " segundos. " ;
+        cout << "Nros de Frames sem desenho: " << nFrames << endl;
+        cout << "FPS(sem desenho): " << nFrames/TempoTotal << endl;
+        TempoTotal = 0;
+        nFrames = 0;
+    }
+    if (animando)
+    {
+        if(!plane1.ret)
+            AvancaComBezier(plane1,Curva1[0]);
+        else
+            AvancaComBezier(plane1,Curva1[1]);
+
+        if(!plane2.ret)
+            AvancaComBezier(plane2,Curva2[0]);
+        else
+            AvancaComBezier(plane2,Curva2[1]);
+        TempoDaAnimacao += dt;
+    }
+    else
+    {
+        TempoDaAnimacao= 0;
+        animando = true;
+        plane1.ret = !plane1.ret;
+        plane2.ret = !plane2.ret;
+    }
+}
+
+
 // **********************************************************************
 //  void DesenhaCubo()
 //
@@ -1032,7 +1210,6 @@ void DesenhaEm2D()
 // **********************************************************************
 void display( void )
 {
-
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
 	DefineLuz();
@@ -1043,12 +1220,45 @@ void display( void )
 	glMatrixMode(GL_MODELVIEW);
 
     glColor3f(1,1,1);
-    TracaBezier3Pontos(Curva1[0]);
-    TracaBezier3Pontos(Curva1[1]);
+  //  TracaBezier3Pontos(Curva2[0]);
+  //  TracaBezier3Pontos(Curva2[1]);
+   //  TracaBezier3Pontos(Curva1[0]);
+  //  TracaBezier3Pontos(Curva1[1]);
 
     playerHandler();
     DesenhaCidade(QtdX,QtdZ);
+
+
+     int randBomb = (rand() % BOMBCEIL);
+        if(randBomb <= bombChance)
+            spawnBomb(plane1);
+
+     glPushMatrix();
+      //  plane1.posicao.imprime();
+        glTranslatef(plane1.posicao.x, plane1.posicao.y ,plane1.posicao.z);
+        drawPlane();
+    glPopMatrix();
+
+    randBomb = (rand() % BOMBCEIL);
+    if(randBomb <= bombChance)
+        spawnBomb(plane2);
+
+    bombHandler();
+    cout << bombs.size();
+
+    glPushMatrix();
+      //  plane1.posicao.imprime();
+        glTranslatef(plane2.posicao.x, plane2.posicao.y ,plane2.posicao.z);
+        drawPlane();
+    glPopMatrix();
+
+
+
+
+
+
     DesenhaEm2D();
+
 
 	glutSwapBuffers();
 }

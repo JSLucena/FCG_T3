@@ -62,19 +62,18 @@
 			<Add option="-Wno-narrowing" />
 			<Add option="-Wno-deprecated-declarations" />
 		</Compiler>
-		<Unit filename="ImageClass.cpp" />
-		<Unit filename="ImageClass.h" />
 		<Unit filename="ListaDeCoresRGB.cpp" />
 		<Unit filename="ListaDeCoresRGB.h" />
+		<Unit filename="Poligono.cpp" />
+		<Unit filename="Poligono.h" />
 		<Unit filename="Ponto.cpp" />
 		<Unit filename="Ponto.h" />
 		<Unit filename="SimuladorDeCidade-VersaoBasica.cpp" />
 		<Unit filename="Temporizador.cpp" />
 		<Unit filename="Temporizador.h" />
 		<Unit filename="TexturaAsfalto/Texturas.h" />
-		<Unit filename="TextureClass.cpp" />
-		<Unit filename="TextureClass.h" />
 		<Unit filename="player.h" />
+		<Unit filename="std_image.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
