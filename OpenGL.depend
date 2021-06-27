@@ -313,12 +313,13 @@
 	<GLUT/glut.h>
 	<glut.h>
 
-1624759902 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
+1624824872 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
 	"std_image.h"
 	<cstdlib>
 	<iostream>
 	<cmath>
 	<ctime>
+	<vector>
 	<windows.h>
 	<glut.h>
 	<sys/time.h>

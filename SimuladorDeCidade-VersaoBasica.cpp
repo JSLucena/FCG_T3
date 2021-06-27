@@ -119,6 +119,9 @@ void DesenhaCubo();
 #define COMBUSTIVEL 3
 #define BOMBCEIL 1000
 #define truckSPD 0.05
+#define ALLOWBOMBS 1
+#define STARTPOS 0
+#define MAPSIZE 12
 
 // Matriz que armazena informacoes sobre o que existe na cidade
 Elemento Cidade[100][100];
@@ -134,7 +137,7 @@ Elemento Cidade[100][100];
 //  https://www.inf.pucrs.br/pinho/CG/Aulas/OpenGL/Interseccao/ExerciciosDeInterseccao.html
 
 // ***********************************************
-Player  truck = Player(0,0);
+Player  truck = Player(STARTPOS,STARTPOS);
 
 float truckLookingAt[3];
 Ponto dir;
@@ -150,7 +153,7 @@ float fuel = 100.0;
 
 
 
-Combustivel combArray[10];
+Combustivel combArray[15];
 int combCount = 0;
 
 Plane plane1;
@@ -166,13 +169,13 @@ GLuint texturesIDS[LAST_IMG];
 void loadTexture()
 {
 
-
+glGenTextures(13, texturesIDS);
 
   for(int i=0;i<LAST_IMG;i++)
   {
 
-      glGenTextures(i, &texturesIDS[i]);
-    texturesIDS[1] = i;
+
+ //   texturesIDS[i] = i;
     glBindTexture(GL_TEXTURE_2D, texturesIDS[i]);
     // set the texture wrapping/filtering options (on the currently bound texture object)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -596,7 +599,7 @@ void InicializaCidade(int QtdX, int QtdZ)
         for (int j=0;j<QtdX;j++)
             Cidade[i][j].tipo = VAZIO;
 
-string nome = "mapa.txt";
+string nome = "mapa2.txt";
     ifstream input;
     input.open(nome, ios::in);
     if (!input)
@@ -609,6 +612,8 @@ string nome = "mapa.txt";
     unsigned int linhas, colunas;
 
     input >> linhas >> colunas;
+    QtdZ= linhas;
+    QtdX = colunas;
     for (int j=0; j< linhas; j++)
     {
         for(int i = 0; i < colunas; i++)
@@ -617,12 +622,12 @@ string nome = "mapa.txt";
         // Le cada elemento da linha
         input >> Cidade[i][j].tipo;
         if(Cidade[i][j].tipo == RUA)
-            Cidade[i][j].cor = Bronze;
+            Cidade[i][j].cor = Gray;
         else if (Cidade[i][j].tipo == VAZIO)
-            Cidade[i][j].cor = Red;
+            Cidade[i][j].cor = DarkBrown;
         else if (Cidade[i][j].tipo == COMBUSTIVEL)
         {
-            Cidade[i][j].cor = Bronze;
+            Cidade[i][j].cor = Gray;
             Cidade[i][j].hasFuel = true;
             combArray[combCount].posX = i;
             combArray[combCount].posZ = j;
@@ -641,7 +646,7 @@ string nome = "mapa.txt";
         }
         else
         {
-            Cidade[i][j].cor = Red;
+            Cidade[i][j].cor = DarkBrown;
             Cidade[i][j].corPredio = rand() % LAST_COLOR;
             Cidade[i][j].altura = 0.2 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/2));
 
@@ -662,7 +667,7 @@ string nome = "mapa.txt";
     cout << "Mapa lido com sucesso!" << endl;
 
 
-    nome = "textureMap.txt";
+    nome = "textureMap2.txt";
     input.open(nome, ios::in);
     if (!input)
     {
@@ -724,7 +729,13 @@ void init(void)
     }
     glEnable(GL_NORMALIZE);
 
-    Curva1[0][0] = Ponto (0,6,9);
+    float qtdx,qtdz;
+
+    qtdx = QtdX;
+    qtdz = QtdZ;
+
+
+   Curva1[0][0] = Ponto (0,6,9);
     Curva1[0][1] = Ponto (7,5,5);
     Curva1[0][2] = Ponto (6,7,3);
     Curva1[1][0] = Ponto (6,7,3);
@@ -745,8 +756,8 @@ void init(void)
 
     srand((unsigned int)time(NULL));
 
-    QtdX = 12;
-    QtdZ = 12;
+    QtdX = MAPSIZE;
+    QtdZ = MAPSIZE;
 
     InicializaCidade(QtdX, QtdZ);
 
@@ -1091,7 +1102,7 @@ void PosicUser()
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(-1, 6, 6,   // Posi‹o do Observador
+    gluLookAt(-1, 10, 15,   // Posi‹o do Observador
               truck.Posicao.x,0,truck.Posicao.z,     // Posi‹o do Alvo
               0.0f,1.0f,0.0f); // UP
     }
@@ -1228,10 +1239,11 @@ void display( void )
     playerHandler();
     DesenhaCidade(QtdX,QtdZ);
 
-
+    #if ALLOWBOMBS
      int randBomb = (rand() % BOMBCEIL);
         if(randBomb <= bombChance)
             spawnBomb(plane1);
+    #endif
 
      glPushMatrix();
       //  plane1.posicao.imprime();
@@ -1239,9 +1251,11 @@ void display( void )
         drawPlane();
     glPopMatrix();
 
+    #if ALLOWBOMBS
     randBomb = (rand() % BOMBCEIL);
     if(randBomb <= bombChance)
         spawnBomb(plane2);
+    #endif
 
     bombHandler();
     cout << bombs.size();
