@@ -20,7 +20,7 @@ using namespace std;
 
 
 #include <vector>
-
+#include "Poligono.h"
 #define TURNSTRENGTH 5
 
 
@@ -40,6 +40,7 @@ public:
     Ponto dirPoint;
     Ponto Posicao;
     Ponto target;
+    Poligono Hitbox;
 
 
     Player(float startPosX, float startPosZ);
@@ -125,6 +126,14 @@ void Player::updateHitbox() ///atualizamos a hitbox, recriando ela do zero
             glEnd();
    // Hitbox.imprime();
    // cout << endl;
+
+
+   Hitbox = Poligono();
+
+   Hitbox.insereVertice(Ponto(Posicao.x-0.2,Posicao.z-0.2));
+   Hitbox.insereVertice(Ponto(Posicao.x+0.2,Posicao.z-0.2));
+   Hitbox.insereVertice(Ponto(Posicao.x+0.2,Posicao.z+0.2));
+   Hitbox.insereVertice(Ponto(Posicao.x-0.2,Posicao.z+0.2));
 }
 
 void Player::movePlayer(float speed)

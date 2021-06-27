@@ -66,7 +66,7 @@ int ModoDeExibicao = 1;
 double nFrames=0;
 double TempoTotal=0;
 
-Ponto Curva1[3];
+Ponto Curva1[2][3];
 
 // Qtd de ladrilhos do piso. Inicialzada na INIT
 int QtdX;
@@ -82,6 +82,7 @@ public:
     float altura;
     int texID;
     bool hasFuel;
+    Poligono hitBox = Poligono();
 };
 
 class Combustivel{
@@ -90,9 +91,16 @@ public:
     int posZ;
     int rotation;
     bool isAlive = false;
+    Poligono hitBox = Poligono();
 };
 
+class Plane{
+public:
+    int posX;
+    int posZ;
+    int rotation;
 
+};
 
 // codigos que definem o o tipo do elemento que está em uma célula
 #define VAZIO 0
@@ -205,7 +213,50 @@ bool HaInterseccao(Ponto k, Ponto l, Ponto m, Ponto n)
         return true;
     else return false;
 }
+bool testaInterseccao(Poligono p1, Poligono p2)
+{
+    bool alreadyAddedp1,alreadyAddedp2, debug, isInside = false;
+    Ponto auxA1,auxA2, auxB1,auxB2, newPonto;
+    /// teste de interseccao
+    for(int i = 0; i < p1.getNVertices(); i++)
+    {
+        for(int j = 0; j < p2.getNVertices(); j++)
+        {
+            if(j == p2.getNVertices() - 1 )
+            {
+                auxB1 = p2.getVertice(j);
+                auxB2 = p2.getVertice(0);
+            }
+            else
+            {
+                auxB1 = p2.getVertice(j);
+                auxB2 = p2.getVertice(j+1);
+            }
+            if (i == p1.getNVertices() - 1)
+            {
+                auxA1 = p1.getVertice(i);
+                auxA2 = p1.getVertice(0);
+            }
+            else
+            {
+                auxA1 = p1.getVertice(i);
+                auxA2 = p1.getVertice(i+1);
+            }
 
+            debug = HaInterseccao(auxA1,auxA2,auxB1,auxB2);
+
+            if(debug == true)
+            {
+
+                return debug;
+
+
+            }
+
+        }
+    }
+    return false;
+}
 
 
 
@@ -217,77 +268,37 @@ bool HaInterseccao(Ponto k, Ponto l, Ponto m, Ponto n)
 bool collide()
 {
     bool bateu;
-    /*
+
      for (int i=0;i<QtdZ;i++)
         for (int j=0;j<QtdX;j++)
         {
             if(Cidade[i][j].tipo == PREDIO || Cidade[i][j].tipo == VAZIO)
             {
-
-                Ponto P1 = Ponto(i+1.0,0,j+1.0);
-                Ponto P2 = Ponto(i+1.0,0,j-1.0);
-
-
-                bateu = HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-                if(bateu);
-                    return true;
-                P1 = Ponto(i-1.0,0,j-1.0);
-                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-                if(bateu);
-                    return true;
-                P2 = Ponto(i-1.0,0,j+1.0);
-                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-                if(bateu);
-                    return true;
-                P1 = Ponto(i+1.0,0,j+1.0);
-                HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-                if(bateu);
+             //   cout << Cidade[i][j].tipo << endl;
+                bateu = testaInterseccao(Cidade[i][j].hitBox,truck.Hitbox);
+               // truck.Hitbox.imprime();
+                //cout << endl;
+                //Cidade[i][j].hitBox.imprime();
+                //cout << "#########" << endl;
+                if(bateu)
                     return true;
             }
         }
-        */
-    int tileFinderX, tileFinderZ;
-    tileFinderX = truck.target.x;
-    tileFinderZ = truck.target.z;
-
-    if(Cidade[tileFinderX][tileFinderZ].tipo == PREDIO || Cidade[tileFinderX][tileFinderZ].tipo == VAZIO)
+    for(int i = 0; i < combCount; i++)
     {
-        Ponto P1 = Ponto(tileFinderX+1.0,0,tileFinderZ+1.0);
-        Ponto P2 = Ponto(tileFinderX+1.0,0,tileFinderZ-1.0);
-        cout << "TRUCK:";
-        truck.Posicao.imprime();
-         cout << endl;
-        Ponto P3 = truck.Posicao + truck.dirPoint * speed;
-        cout << "TRUCK+:";
-        P3.imprime();
-        cout << endl;
+       //combHBs[i].imprime();
+        if(combArray[i].isAlive)
+        {
+            bateu = testaInterseccao(combArray[i].hitBox,truck.Hitbox);
+            if(bateu)
+            {
+                 fuel= 100.0;
+                 combArray[i].isAlive = false;
+            }
 
-        P2.imprime();
-        P1.imprime();
+        }
 
-        bateu = HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-        cout << bateu;
-        if(bateu)
-            return true;
-        P1 = Ponto(tileFinderX-1.0,0,tileFinderZ-1.0);
-        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-        cout << bateu;
-        if(bateu)
-            return true;
-        P2 = Ponto(tileFinderX-1.0,0,tileFinderZ+1.0);
-        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-        cout << bateu;
-        if(bateu)
-            return true;
-        P1 = Ponto(tileFinderX+1.0,0,tileFinderZ+1.0);
-        HaInterseccao(truck.Posicao + truck.dirPoint * speed, truck.Posicao, P1,P2);
-        cout << bateu;
-        if(bateu)
-            return true;
     }
-
-
-    cout << "Raycast:"<<tileFinderX << "," << tileFinderZ << endl;
 
     return false;
 }
@@ -310,6 +321,7 @@ void playerHandler()
         }
         else
         {
+            truck.movePlayer(-speed);
             speed = 0;
         }
         truck.updateHitbox();
@@ -326,6 +338,57 @@ void playerHandler()
             fuel-= 0.00035;
         else
             fuel-= 0.00105;
+    glPopMatrix();
+}
+
+
+void drawPlane()
+{
+    glPushMatrix();
+        defineCor(DarkGreen);
+        glScalef(0.1,0.1,0.1);
+       // glRotatef(fuelRotation,0,1,0);
+        glBegin ( GL_QUADS );
+        // Front Face
+        glNormal3f(0,0,1);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        // Back Face
+        glNormal3f(0,0,-1);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        // Top Face
+        glNormal3f(0,1,0);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        // Bottom Face
+        glNormal3f(0,-1,0);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        // Right face
+        glNormal3f(1,0,0);
+        glVertex3f( 1.0f, -1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f, -1.0f);
+        glVertex3f( 1.0f,  1.0f,  1.0f);
+        glVertex3f( 1.0f, -1.0f,  1.0f);
+        // Left Face
+        glNormal3f(-1,0,0);
+        glVertex3f(-1.0f, -1.0f, -1.0f);
+        glVertex3f(-1.0f, -1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f,  1.0f);
+        glVertex3f(-1.0f,  1.0f, -1.0f);
+        glEnd();
+
+
+
     glPopMatrix();
 }
 void fuelDrawing(int fuelRotation)
@@ -439,7 +502,15 @@ string nome = "mapa.txt";
             combArray[combCount].posX = i;
             combArray[combCount].posZ = j;
             combArray[combCount].isAlive = true;
+            combArray[combCount].hitBox.insereVertice(Ponto(combArray[combCount].posX-0.2,combArray[combCount].posZ-0.2));
+           combArray[combCount].hitBox.insereVertice(Ponto(combArray[combCount].posX+0.2,combArray[combCount].posZ-0.2));
+            combArray[combCount].hitBox.insereVertice(Ponto(combArray[combCount].posX+0.2,combArray[combCount].posZ+0.2));
+           combArray[combCount].hitBox.insereVertice(Ponto(combArray[combCount].posX-0.2,combArray[combCount].posZ+0.2));
+
+           cout << combArray[combCount].posX << "," << combArray[combCount].posZ << endl;
             combCount++;
+
+
 
 
         }
@@ -450,7 +521,10 @@ string nome = "mapa.txt";
             Cidade[i][j].altura = 0.2 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/2));
 
         }
-
+        Cidade[i][j].hitBox.insereVertice(Ponto(i-0.5,j-0.5));
+        Cidade[i][j].hitBox.insereVertice(Ponto(i+0.5,j-0.5));
+        Cidade[i][j].hitBox.insereVertice(Ponto(i+0.5,j+0.5));
+        Cidade[i][j].hitBox.insereVertice(Ponto(i-0.5,j+0.5));
 
         if(!input)
             break;
@@ -525,9 +599,12 @@ void init(void)
     }
     glEnable(GL_NORMALIZE);
 
-    Curva1[0] = Ponto (-6,0,1);
-    Curva1[1] = Ponto (0,10,1);
-    Curva1[2] = Ponto (6,0,1);
+    Curva1[0][0] = Ponto (0,6,9);
+    Curva1[0][1] = Ponto (7,5,5);
+    Curva1[0][2] = Ponto (6,7,3);
+    Curva1[1][0] = Ponto (6,7,3);
+    Curva1[1][1] = Ponto (0,4,8);
+    Curva1[1][2] = Ponto (0,6,9);
 
     srand((unsigned int)time(NULL));
 
@@ -583,7 +660,7 @@ Ponto CalculaBezier3(Ponto PC[], double t)
     return P;
 }
 // **********************************************************************
-void TracaBezier3Pontos()
+void TracaBezier3Pontos(Ponto curva[3])
 {
     double t=0.0;
     double DeltaT = 1.0/10;
@@ -593,12 +670,12 @@ void TracaBezier3Pontos()
 
     while(t<1.0)
     {
-        P = CalculaBezier3(Curva1, t);
+        P = CalculaBezier3(curva, t);
         glVertex3f(P.x, P.y, P.z);
         t += DeltaT;
        // P.imprime(); cout << endl;
     }
-    P = CalculaBezier3(Curva1, 1.0); // faz o fechamento da curva
+    P = CalculaBezier3(curva, 1.0); // faz o fechamento da curva
     glVertex3f(P.x, P.y, P.z);
     glEnd();
 }
@@ -966,7 +1043,8 @@ void display( void )
 	glMatrixMode(GL_MODELVIEW);
 
     glColor3f(1,1,1);
-    TracaBezier3Pontos();
+    TracaBezier3Pontos(Curva1[0]);
+    TracaBezier3Pontos(Curva1[1]);
 
     playerHandler();
     DesenhaCidade(QtdX,QtdZ);

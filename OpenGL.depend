@@ -245,10 +245,12 @@
 1584988348 source:f:\trabalhos\20211\cg\csgt1\temporizador.cpp
 	"Temporizador.h"
 
-1618076330 source:f:\trabalhos\20211\cg\fcg_t3\poligono.cpp
+1621807369 source:f:\trabalhos\20211\cg\fcg_t3\poligono.cpp
+	<iostream>
+	<fstream>
 	"Poligono.h"
 
-1618076404 f:\trabalhos\20211\cg\fcg_t3\poligono.h
+1621807356 f:\trabalhos\20211\cg\fcg_t3\poligono.h
 	<iostream>
 	<windows.h>
 	<glut.h>
@@ -311,7 +313,7 @@
 	<GLUT/glut.h>
 	<glut.h>
 
-1624744333 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
+1624759902 source:f:\trabalhos\20211\cg\fcg_t3\simuladordecidade-versaobasica.cpp
 	"std_image.h"
 	<cstdlib>
 	<iostream>
@@ -328,13 +330,14 @@
 	"player.h"
 	"TexturaAsfalto/Texturas.h"
 
-1624736306 f:\trabalhos\20211\cg\fcg_t3\player.h
+1624757513 f:\trabalhos\20211\cg\fcg_t3\player.h
 	<iostream>
 	<windows.h>
 	<glut.h>
 	<GLUT/glut.h>
 	<glut.h>
 	<vector>
+	"Poligono.h"
 
 1624742599 f:\trabalhos\20211\cg\fcg_t3\texturaasfalto\texturas.h
 
